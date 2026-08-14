@@ -1,0 +1,29 @@
+09:43:22  Ready. lat=12.191718 lon=-68.974962 heading=169.5
+09:43:22  Setting weight: gross=200.0t, target fuel=5.0t (stepped fill)
+09:43:41  -> mains achieved: 5000 kg ([1250, 1250, 1250, 1250])
+09:43:41  -> TrueZfw=429901 (195.0t), actual gross=200.0t
+09:43:42  Releasing parking brake: Brakes=1000;1000 -> 0;0
+09:43:44  Applying tiller = 999 (100.0%), breakaway tla=400.0
+09:43:45  Breakaway achieved at 4.07 kt (0.3s), holding power (continuous-power mode)
+09:44:17  Stopping: 360.1 deg turned in 32.2s, 165 samples
+09:44:17  Returning tiller to center
+09:44:19  Setting parking brake: Brakes=1000;1000 -> Qh397=1 -> 0;0
+09:44:21  ======================================================================
+09:44:21  RESULT weight=200.0t tiller=100.0% tla=400.0
+09:44:21    164 valid (speed, radius) samples
+09:44:21    ~ 4 kt: radius median= 25.11 m (  82.4 ft)  n=10 min=24.96 max=25.11
+09:44:21    ~ 5 kt: radius median= 25.11 m (  82.4 ft)  n=15 min=24.92 max=25.11
+09:44:21    ~ 6 kt: radius median= 25.11 m (  82.4 ft)  n=13 min=24.98 max=25.11
+09:44:21    ~ 7 kt: radius median= 25.10 m (  82.4 ft)  n=12 min=25.10 max=25.11
+09:44:21    ~ 8 kt: radius median= 25.10 m (  82.3 ft)  n=11 min=25.10 max=25.10
+09:44:21    ~ 9 kt: radius median= 25.10 m (  82.3 ft)  n=14 min=25.09 max=25.10
+09:44:21    ~10 kt: radius median= 25.09 m (  82.3 ft)  n=22 min=25.08 max=25.09
+09:44:21    ~11 kt: radius median= 25.09 m (  82.3 ft)  n=30 min=25.08 max=25.09
+09:44:21    ~12 kt: radius median= 25.09 m (  82.3 ft)  n=18 min=25.09 max=25.09
+09:44:21    ~13 kt: radius median= 25.09 m (  82.3 ft)  n=12 min=25.09 max=25.09
+09:44:21    ~14 kt: radius median= 25.09 m (  82.3 ft)  n=7 min=25.09 max=25.09
+09:44:21    Sanity check @5kt: 25.11 m (reference ballpark: 23-25 m)
+09:44:21  ======================================================================
+09:44:21  Log written: /tmp/claude-1000/-home-kronberg-psxhacks/a46b2231-3315-403e-9129-33c916b96cba/scratchpad/roll_200t_100pct_tla400_20260814_094320.csv
+
+[exited with code 0]

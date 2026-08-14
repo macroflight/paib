@@ -1,0 +1,36 @@
+10:50:35  Ready. lat=12.192232 lon=-68.975384 heading=101.8
+10:50:35  Setting weight: gross=200.0t, target fuel=5.0t (stepped fill)
+10:50:36  -> mains achieved: 5000 kg ([1250, 1250, 1250, 1250])
+10:50:36  -> center achieved: 0 kg (target was 0 kg)
+10:50:36  -> TrueZfw=429901 (195.0t), actual gross=200.0t
+10:50:37  Releasing parking brake: Brakes=1000;1000 -> 0;0
+10:50:39  Applying tiller = 999 (100.0%), breakaway tla=0.0
+10:50:40  Breakaway achieved at 0.43 kt (0.9s), reducing to idle
+10:51:00  Pilot mode: 6.7 kt > 6.5, pulsing 50% brake
+10:51:03  Pilot mode: 2.1 kt <= 3.5, releasing brake
+10:51:24  Pilot mode: 6.6 kt > 6.5, pulsing 50% brake
+10:51:27  Pilot mode: 2.6 kt <= 3.5, releasing brake
+10:51:42  Pilot mode: 6.5 kt > 6.5, pulsing 50% brake
+10:51:45  Pilot mode: 2.2 kt <= 3.5, releasing brake
+10:52:03  Pilot mode: 6.6 kt > 6.5, pulsing 50% brake
+10:52:06  Pilot mode: 2.7 kt <= 3.5, releasing brake
+10:52:19  Stopping: 360.8 deg turned in 98.9s, 481 samples
+10:52:19  Returning tiller to center
+10:52:19  Pilot mode: braking smoothly to a stop
+10:52:37  Stopped (0.00 kt)
+10:52:39  Setting parking brake: Brakes=1000;1000 -> Qh397=1 -> 0;0
+10:52:41  ======================================================================
+10:52:41  RESULT weight=200.0t tiller=100.0% tla=0.0
+10:52:41    477 valid (speed, radius, turn-rate) samples
+10:52:41    ~ 1 kt: radius median= 31.37 m ( 102.9 ft)  turn_rate= 1.03 deg/s  n=40 min=30.19 max=33.12
+10:52:41    ~ 2 kt: radius median= 31.32 m ( 102.8 ft)  turn_rate= 1.90 deg/s  n=81 min=30.22 max=31.39
+10:52:41    ~ 3 kt: radius median= 31.29 m ( 102.7 ft)  turn_rate= 2.82 deg/s  n=81 min=30.49 max=31.31
+10:52:41    ~ 4 kt: radius median= 31.28 m ( 102.6 ft)  turn_rate= 3.77 deg/s  n=81 min=30.60 max=31.30
+10:52:41    ~ 5 kt: radius median= 31.27 m ( 102.6 ft)  turn_rate= 4.65 deg/s  n=90 min=30.77 max=279.90
+10:52:41    ~ 6 kt: radius median= 31.26 m ( 102.6 ft)  turn_rate= 5.69 deg/s  n=83 min=30.97 max=31.27
+10:52:41    ~ 7 kt: radius median= 31.24 m ( 102.5 ft)  turn_rate= 6.25 deg/s  n=21 min=31.14 max=31.26
+10:52:41    Sanity check @5kt: 31.27 m (reference ballpark: 23-25 m)
+10:52:41  ======================================================================
+10:52:41  Log written: /tmp/claude-1000/-home-kronberg-psxhacks/a46b2231-3315-403e-9129-33c916b96cba/scratchpad/roll_200t_100pct_tla0_20260814_105033.csv
+
+[exited with code 0]

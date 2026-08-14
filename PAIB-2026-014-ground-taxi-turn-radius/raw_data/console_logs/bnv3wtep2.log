@@ -1,0 +1,31 @@
+09:31:46  Ready. lat=12.191255 lon=-68.975111 heading=232.8
+09:31:46  Setting weight: gross=380.0t, target fuel=130.0t (stepped fill)
+09:32:07  -> mains achieved: 92242 kg ([13621, 32500, 32500, 13621])
+09:32:31  -> center achieved: 37757 kg (target was 37758 kg)
+09:32:31  -> TrueZfw=551157 (250.0t), actual gross=380.0t
+09:32:32  Releasing parking brake: Brakes=1000;1000 -> 0;0
+09:32:34  Applying tiller = 999 (100.0%), breakaway tla=800.0
+09:32:39  Breakaway achieved at 0.60 kt (4.8s), reducing to idle
+09:33:24  Pilot mode: 6.7 kt > 6.5, pulsing 50% brake
+09:33:27  Pilot mode: 2.9 kt <= 3.5, releasing brake
+09:33:56  Stopping: 360.8 deg turned in 76.8s, 376 samples
+09:33:56  Returning tiller to center
+09:33:56  Pilot mode: braking smoothly to a stop
+09:33:59  Stopped (0.10 kt)
+09:34:01  Setting parking brake: Brakes=1000;1000 -> Qh397=1 -> 0;0
+09:34:03  ======================================================================
+09:34:03  RESULT weight=380.0t tiller=100.0% tla=800.0
+09:34:03    382 valid (speed, radius) samples
+09:34:03    ~ 0 kt: radius median= 25.79 m (  84.6 ft)  n=1 min=25.79 max=25.79
+09:34:03    ~ 1 kt: radius median= 25.12 m (  82.4 ft)  n=24 min=25.11 max=25.68
+09:34:03    ~ 2 kt: radius median= 25.10 m (  82.4 ft)  n=54 min=24.92 max=25.11
+09:34:03    ~ 3 kt: radius median= 25.10 m (  82.3 ft)  n=72 min=24.81 max=113.06
+09:34:03    ~ 4 kt: radius median= 25.10 m (  82.3 ft)  n=69 min=24.86 max=98.16
+09:34:03    ~ 5 kt: radius median= 25.09 m (  82.3 ft)  n=70 min=24.91 max=73.79
+09:34:03    ~ 6 kt: radius median= 25.09 m (  82.3 ft)  n=90 min=24.98 max=55.19
+09:34:03    ~ 7 kt: radius median= 25.09 m (  82.3 ft)  n=2 min=25.09 max=25.09
+09:34:03    Sanity check @5kt: 25.09 m (reference ballpark: 23-25 m)
+09:34:03  ======================================================================
+09:34:03  Log written: /tmp/claude-1000/-home-kronberg-psxhacks/a46b2231-3315-403e-9129-33c916b96cba/scratchpad/roll_380t_100pct_tla800_20260814_093143.csv
+
+[exited with code 0]

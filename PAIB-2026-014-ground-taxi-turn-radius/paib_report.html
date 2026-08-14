@@ -1,0 +1,576 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>PAIB Report 2026-014</title>
+<style>
+  @page { size: A4; margin: 22mm 18mm 20mm 18mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Georgia", "Times New Roman", serif;
+    color: #1a1f2b;
+    font-size: 10.8pt;
+    line-height: 1.5;
+    margin: 0;
+  }
+  .cover {
+    height: 253mm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    page-break-after: always;
+  }
+  .cover img.logo { width: 150px; height: 150px; margin-bottom: 18px; }
+  .cover .agency {
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #0d2340;
+    font-size: 13pt;
+  }
+  .cover .agency-sub {
+    font-family: "Arial", sans-serif;
+    font-size: 9pt;
+    color: #5a6472;
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+  .cover .divider {
+    width: 90px;
+    border-top: 2px solid #d9a441;
+    margin: 22px 0;
+  }
+  .cover h1 {
+    font-size: 21pt;
+    color: #0d2340;
+    margin: 0 0 6px 0;
+    max-width: 480px;
+  }
+  .cover h2 {
+    font-size: 12.5pt;
+    font-weight: 400;
+    color: #43506a;
+    margin: 0 0 26px 0;
+  }
+  .cover .metabox {
+    font-family: "Arial", sans-serif;
+    font-size: 9pt;
+    color: #333;
+    border: 1px solid #c8ccd4;
+    border-radius: 3px;
+    padding: 14px 26px;
+    text-align: left;
+    line-height: 1.9;
+  }
+  .cover .metabox b { color: #0d2340; display: inline-block; width: 140px; }
+  .cover .classification {
+    font-family: "Arial", sans-serif;
+    font-size: 8.3pt;
+    color: #9a3b3b;
+    letter-spacing: 1.5px;
+    margin-top: 30px;
+    border: 1px solid #9a3b3b;
+    padding: 3px 12px;
+    border-radius: 2px;
+  }
+  .cover .motto {
+    font-family: "Arial", sans-serif;
+    font-style: italic;
+    font-size: 8.5pt;
+    color: #8a94a3;
+    margin-top: 14px;
+  }
+
+  .page-header {
+    font-family: "Arial", sans-serif;
+    font-size: 7.6pt;
+    color: #8a94a3;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #d9dde3;
+    padding-bottom: 4px;
+    margin-bottom: 14px;
+  }
+
+  h2.section {
+    font-family: "Arial", sans-serif;
+    font-size: 13.5pt;
+    color: #0d2340;
+    border-bottom: 2px solid #d9a441;
+    padding-bottom: 4px;
+    margin: 26px 0 10px 0;
+  }
+  h3.sub {
+    font-family: "Arial", sans-serif;
+    font-size: 11pt;
+    color: #1c3d66;
+    margin: 16px 0 6px 0;
+  }
+  p { margin: 6px 0 10px 0; text-align: justify; }
+  ul, ol { margin: 6px 0 10px 22px; padding: 0; }
+  li { margin-bottom: 4px; }
+
+  .finding-box {
+    background: #f4f7fb;
+    border-left: 3px solid #1c3d66;
+    padding: 10px 14px;
+    margin: 12px 0;
+    font-size: 10.3pt;
+  }
+  .finding-box b.label {
+    font-family: "Arial", sans-serif;
+    font-size: 8pt;
+    letter-spacing: 1px;
+    color: #1c3d66;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9.3pt;
+    margin: 10px 0 16px 0;
+    font-family: "Arial", sans-serif;
+  }
+  th {
+    background: #0d2340;
+    color: #fff;
+    text-align: left;
+    padding: 6px 8px;
+    font-weight: 600;
+  }
+  td {
+    padding: 5px 8px;
+    border-bottom: 1px solid #e2e5ea;
+  }
+  tr:nth-child(even) td { background: #f7f9fb; }
+  td.num, th.num { text-align: right; }
+  .transition-row td { background: #fdf1e2 !important; font-weight: 600; }
+
+  .caveat {
+    font-size: 8.6pt;
+    color: #7b8494;
+    font-style: italic;
+  }
+
+  .signoff {
+    margin-top: 30px;
+    font-family: "Arial", sans-serif;
+    font-size: 9.5pt;
+  }
+  .signoff table { width: auto; border: none; }
+  .signoff td { border: none; padding: 3px 0; }
+  .sigline {
+    border-top: 1px solid #333;
+    width: 220px;
+    margin-top: 26px;
+    padding-top: 3px;
+    font-size: 8.3pt;
+    color: #555;
+  }
+
+  .footer-note {
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    font-size: 7.5pt;
+    color: #a3aab5;
+    margin-top: 30px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER PAGE ============ -->
+<div class="cover">
+  <img class="logo" src="file:///home/kronberg/PAIB-rubberband.png" alt="PAIB logo">
+  <div class="agency">PENGUIN ACCIDENT INVESTIGATION BOARD</div>
+  <div class="agency-sub">PENGUIN&rsquo;S DEMOCRATIC REPUBLIC OF PATAGONIA &nbsp;&bull;&nbsp; OFFICE OF FLIGHT OPERATIONS RESEARCH</div>
+  <div class="divider"></div>
+  <h1>Ground Taxi Turn Radius Performance Investigation</h1>
+  <h2>Boeing 747-400 &mdash; Nosewheel Steering, Body Gear Assist, and Load-Sensitivity Review</h2>
+  <div class="metabox">
+    <div><b>Report Number</b> PAIB/2026/014</div>
+    <div><b>Investigation Type</b> Technical Performance Review</div>
+    <div><b>Aircraft Type</b> Boeing 747-400 (simulated, PSX)</div>
+    <div><b>Trigger</b> User-community reports of excessive taxi turn radius</div>
+    <div><b>Date of Issue</b> 14 August 2026</div>
+    <div><b>Investigator-in-Charge</b> Claude, Automated Test &amp; Analysis Unit</div>
+  </div>
+  <div class="classification">DISTRIBUTION: UNRESTRICTED &mdash; PUBLIC RELEASE</div>
+  <div class="motto">&ldquo;In Claude Confidimus&rdquo;</div>
+</div>
+
+<!-- ============ PAGE 2: SUMMARY ============ -->
+
+<h2 class="section">Executive Summary</h2>
+<p>
+This investigation was opened in response to reports on the PSX user forum of an excessively wide
+ground taxi turn radius on the Boeing 747-400 model, including one poster&rsquo;s specific
+characterisation that the behaviour was &ldquo;like the body gear is not steering.&rdquo; The Board
+conducted a structured series of controlled taxi trials directly against the simulation host, varying
+aircraft gross weight, tiller deflection, groundspeed, and a candidate confounding parameter
+(<code>Qi275</code>/&ldquo;TowTurnRadius&rdquo;); repeated the full trial series on an MSFS-linked
+visual configuration; and, based on the second poster&rsquo;s own hypothesis, directly disabled body
+gear steering to test it.
+</p>
+<p>
+The Board&rsquo;s principal finding is that disabling body gear steering reproduces a large,
+repeatable increase in turn radius (24&ndash;40%) that closely matches that poster&rsquo;s
+description, and is the strongest identified explanation for at least some forum reports. With body
+gear steering operative, the simulated turn radius otherwise closely tracks published real-world
+reference data across every condition tested, including a genuine transition above approximately 18
+knots groundspeed where body gear steering deactivates automatically and the radius opens up
+substantially &mdash; a behaviour consistent with known real-aircraft nosewheel and body-gear-steering
+limits, not a simulation defect in itself.
+</p>
+
+<div class="finding-box">
+  <b class="label">KEY FINDING</b>
+  Disabling body gear steering (AC + DC BODY GR STRNG ARM circuit breakers pulled) increased turn
+  radius by 24&ndash;40% depending on tiller deflection, weight-independently, closely matching both
+  a forum poster&rsquo;s own description of the reported problem and this investigation&rsquo;s
+  separately-measured high-speed (body-gear-deactivated) condition. The manufacturer&rsquo;s own
+  published data confirms the same effect exists on the real aircraft, but at only &asymp;5.5%
+  &mdash; four to five times smaller than measured here. See Section 3.6.
+</div>
+
+<h3 class="sub">Scope of Trials</h3>
+<ul>
+  <li>Gross weight: 200,000&nbsp;kg and 380,000&nbsp;kg</li>
+  <li>Tiller deflection: 50% and 100% of full travel</li>
+  <li>Groundspeed: 1&ndash;20&nbsp;kt, including a dedicated low-speed regime (2&ndash;3&nbsp;kt) and a
+      dedicated high-speed sweep through 20&nbsp;kt</li>
+  <li>Host configuration: bare simulation host (no visual add-on), and a full configuration with
+      MSFS-linked external visuals</li>
+  <li>Candidate confound: <code>Qi275</code> (&ldquo;TowTurnRadius&rdquo;) at 60, 216 (default), and 800</li>
+  <li>Body gear steering: operative (normal) versus directly disabled via circuit breaker</li>
+</ul>
+
+<h2 class="section">1&nbsp;&nbsp;Background</h2>
+<p>
+A type-rated pilot posting on the PSX user forum reported that, despite following the documented
+minimum-radius turn technique and using full tiller input, the ground steering radius seemed too
+wide to complete a 180&deg; turn on a 60&nbsp;m runway. The simulator&rsquo;s developer requested
+quantified data and asked specifically whether an external scenery interface (MSFS, X-Plane, etc.)
+was in use, noting that such interfaces are not always faithful to PSX&rsquo;s own internal dynamics
+and that, using PSX&rsquo;s own instruments and simplified scenery at full tiller and a sufficiently
+low groundspeed, the turn radius should be correct and realistic; at excessive speed, audible
+nose gear scrubbing should instead be the noticeable symptom. A second, independent poster then
+corroborated the original report, describing an inability to complete a turnaround within a runway
+turnaround pad, and offered a specific characterisation: <i>&ldquo;It&rsquo;s like the body gear is
+not steering.&rdquo;</i> The developer, unable to reproduce a wide radius (measuring 25&nbsp;m at
+5&nbsp;kt) and noting no relevant change in the simulator since 2008, asked again whether an
+external scenery interface add-on might be responsible.
+</p>
+<p>
+In the absence of a resolution in that thread, the Board elected to construct an instrumented,
+repeatable test harness capable of directly commanding the simulation host and measuring the
+resulting ground track with high precision, rather than relying on subjective in-cockpit or
+external-view impressions, and to specifically test the second poster&rsquo;s body-gear-steering
+hypothesis alongside the more general weight/speed/visual-configuration variables.
+</p>
+
+<h2 class="section">2&nbsp;&nbsp;Methodology</h2>
+<p>
+A dedicated test harness was built to connect directly to the simulation host over its native network
+protocol. The harness performs the following, for each trial:
+</p>
+<ol>
+  <li><b>Weight configuration</b> &mdash; gross weight is set via direct zero-fuel-weight and per-tank
+      fuel writes, applied in small incremental steps to avoid triggering the host&rsquo;s simulated
+      truck-speed refuelling behaviour, with automatic compensation for any fuel-tank capacity
+      shortfall so that the commanded gross weight is always achieved exactly.</li>
+  <li><b>Brake release</b> &mdash; parking brake released via the documented full-brake /
+      release sequence.</li>
+  <li><b>Motion &amp; steering</b> &mdash; tiller set to the target deflection; engine power applied only
+      as needed to achieve breakaway, then reduced to idle (or held, for high-speed trials).</li>
+  <li><b>Speed management</b> &mdash; for low-speed trials, a real-pilot braking technique is used:
+      brakes are pulsed at approximately 50% only when speed exceeds the upper threshold for the
+      trial band, released well before the aircraft stops, and never held continuously (avoiding
+      unrealistic continuous brake heating). High-speed trials instead hold engine power constant
+      and allow speed to build freely through the range of interest.</li>
+  <li><b>Data logging</b> &mdash; aircraft position and heading are logged continuously at high rate
+      throughout the manoeuvre.</li>
+  <li><b>Analysis</b> &mdash; instantaneous turn radius is computed at every logged sample from the
+      kinematic relation <i>r = v / &omega;</i> (groundspeed over turn rate), rather than fitting a
+      single circle to the track. This yields a full radius-versus-speed curve from a single
+      continuous manoeuvre. Reported values are the per-speed-band median, which is robust to rare
+      transient artefacts at brake-pulse transitions.</li>
+</ol>
+<p class="caveat">
+Validation: the harness&rsquo;s 25.10&nbsp;m result at 5&nbsp;kt / 100% tiller was cross-checked against
+an independent measurement reported by a PSX developer (25&nbsp;m at 5&nbsp;kt) and found to be in
+close agreement. An additional unsourced figure (23.15&nbsp;m) circulating informally among the
+reporting community was consistent with this result but could not be traced to a verifiable primary
+source and is not relied upon in this report&rsquo;s conclusions (see References).
+</p>
+
+
+<!-- ============ PAGE 3+: FINDINGS ============ -->
+
+<h2 class="section">3&nbsp;&nbsp;Findings</h2>
+
+<h3 class="sub">3.1&nbsp;&nbsp;Low-Speed Matrix (Real-Pilot Braking Technique)</h3>
+<p>Representative results at 5&nbsp;kt groundspeed, host: bare simulation server. Full-configuration
+(MSFS-linked visuals) trials reproduced these results to within measurement precision (Section 3.4).</p>
+<table>
+  <tr><th>Gross Weight</th><th>Tiller</th><th class="num">Radius</th><th class="num">Turn Rate</th></tr>
+  <tr><td>200,000 kg</td><td>100%</td><td class="num">25.10 m (82.4 ft)</td><td class="num">5.87&deg;/s</td></tr>
+  <tr><td>200,000 kg</td><td>50%</td><td class="num">53.27 m (174.8 ft)</td><td class="num">2.77&deg;/s</td></tr>
+  <tr><td>380,000 kg</td><td>100%</td><td class="num">25.09 m (82.3 ft)</td><td class="num">5.87&deg;/s</td></tr>
+  <tr><td>380,000 kg</td><td>50%</td><td class="num">53.24 m (174.7 ft)</td><td class="num">2.77&deg;/s</td></tr>
+</table>
+
+<h3 class="sub">3.2&nbsp;&nbsp;Dedicated Low-Speed Trial (2&ndash;3 kt)</h3>
+<p>
+Following a specific request to characterise the very low end of the speed range typically used
+during a sharp, max-deflection turn, an additional trial constrained groundspeed to a 1.5&ndash;3.0&nbsp;kt
+brake-pulse band at 200,000&nbsp;kg / 100% tiller.
+</p>
+<table>
+  <tr><th>Groundspeed</th><th class="num">Radius</th><th class="num">Turn Rate</th></tr>
+  <tr><td>1 kt</td><td class="num">25.19 m (82.6 ft)</td><td class="num">1.17&deg;/s</td></tr>
+  <tr><td>2 kt</td><td class="num">25.14 m (82.5 ft)</td><td class="num">2.34&deg;/s</td></tr>
+  <tr><td>3 kt</td><td class="num">25.11 m (82.4 ft)</td><td class="num">3.51&deg;/s</td></tr>
+</table>
+<p>No departure from the flat, geometry-governed radius was observed at this reduced speed.</p>
+
+<h3 class="sub">3.3&nbsp;&nbsp;High-Speed Sweep (0&ndash;20 kt, Continuous Power)</h3>
+<p>
+To characterise the upper end of the taxi speed range, four trials held constant engine power and
+allowed groundspeed to build freely through a full 360&deg; turn. All four conditions show an
+essentially flat radius up to approximately 17&ndash;18&nbsp;kt, followed by a sharp, repeatable increase.
+</p>
+<table>
+  <tr><th>Condition</th><th class="num">&le;17 kt (flat)</th><th class="num">18 kt</th><th class="num">19&ndash;20 kt</th></tr>
+  <tr><td>200,000 kg / 100% tiller</td><td class="num">25.1&ndash;25.2 m</td><td class="num">25.1 m</td><td class="num">27.8&ndash;31.3 m</td></tr>
+  <tr><td>380,000 kg / 100% tiller</td><td class="num">25.1&ndash;25.8 m</td><td class="num">27.2 m</td><td class="num">31.2 m</td></tr>
+  <tr><td>200,000 kg / 50% tiller</td><td class="num">53.2&ndash;53.5 m</td><td class="num">53.7 m</td><td class="num">74.7 m</td></tr>
+  <tr><td>380,000 kg / 50% tiller</td><td class="num">53.3&ndash;53.6 m</td><td class="num">54.1 m</td><td class="num">74.7 m</td></tr>
+  <tr class="transition-row"><td colspan="4">Turn rate at transition (100% tiller, ~18&ndash;20kt): 18.4&ndash;21.1&deg;/s &nbsp;|&nbsp; (50% tiller, ~18&ndash;20kt): 7.5&ndash;9.8&deg;/s</td></tr>
+</table>
+<p>
+The onset of this transition (approximately 18&nbsp;kt) coincides closely with two documented
+real-aircraft effects operating in the same narrow speed band: reported degradation of nosewheel
+steering effectiveness at high tiller angles above roughly 18&nbsp;kt, and automatic deactivation of
+the body gear steering system (which pivots the inner body gear up to 13&deg; opposite the nosewheel
+to tighten the turn) above 20&nbsp;kt, re-arming below 15&nbsp;kt. The Board considers it likely that
+both effects contribute to the observed transition; it was not possible to fully separate their
+individual contributions with the present instrumentation.
+</p>
+
+<h3 class="sub">3.4&nbsp;&nbsp;Effect of Gross Weight, Visual Configuration, and TowTurnRadius</h3>
+<table>
+  <tr><th>Variable Tested</th><th>Range</th><th>Effect on Turn Radius</th></tr>
+  <tr><td>Gross weight</td><td>200,000 kg&nbsp;&ndash;&nbsp;380,000&nbsp;kg</td><td><b>None detected.</b> Results match within measurement noise at every speed and tiller condition, including through the high-speed transition.</td></tr>
+  <tr><td>MSFS-linked visual configuration</td><td>Bare host vs. full MSFS-linked configuration</td><td><b>None detected.</b> Full low-speed matrix reproduced to within measurement precision on both configurations.</td></tr>
+  <tr><td><code>Qi275</code> (&ldquo;TowTurnRadius&rdquo;)</td><td>60, 216 (default), 800</td><td><b>None detected.</b> Identical radius (25.10&nbsp;m @ 5&nbsp;kt) at all three settings.</td></tr>
+</table>
+
+<h3 class="sub">3.5&nbsp;&nbsp;Comparison Against Manufacturer-Published Clearance Radii</h3>
+<p>
+The manufacturer publishes clearance radii for the Model 747-400 as a function of the distance
+between the airplane centerline and the turn center, with and without body gear steering. The
+tightest tabulated condition, with body gear steering operative, is reproduced below alongside this
+investigation&rsquo;s own measurement.
+</p>
+<table>
+  <tr><th>Reference Point</th><th class="num">Published Radius</th><th class="num">This Investigation</th></tr>
+  <tr><td>Main / body gear (outside tire)</td><td class="num">18.6 m (61 ft)</td><td class="num" rowspan="3">25.10 m<br><span class="caveat">(100% tiller, 5&nbsp;kt, both weights)</span></td></tr>
+  <tr><td>Nose gear (outside tire)</td><td class="num">27.7 m (91 ft)</td></tr>
+  <tr><td>Wing tip / minimum 180&deg; pavement width</td><td class="num">48.5 m / 46.3 m</td></tr>
+</table>
+<p class="caveat">
+Source: manufacturer Airplane Characteristics for Airport Planning document, Section 4.3.1,
+tightest tabulated row (X = 40 ft). This document does not identify which physical point on the
+airframe the simulator&rsquo;s own reported position track corresponds to; the measured value falling
+between the published main-gear and nose-gear radii is consistent with, but does not prove, a
+reference point somewhere between those two locations along the fuselage.
+</p>
+
+<h3 class="sub">3.6&nbsp;&nbsp;Effect of Body Gear Steering (Directly Disabled)</h3>
+<p>
+Following the second forum poster&rsquo;s specific hypothesis (Section 1), the Board directly
+disabled body gear steering by pulling both the AC and DC <b>BODY GR STRNG ARM</b> circuit
+breakers on the overhead panel, then repeated selected trials unchanged in every other respect
+(same weight-setting, brake-release, and real-pilot braking technique as Section 3.1). This
+isolates body gear steering specifically: the breakers remove electrical arming/control power for
+the body gear steering system without affecting the primary hydraulically-powered nose wheel
+tiller steering, which remained fully functional throughout.
+</p>
+<table>
+  <tr><th>Condition</th><th class="num">BGS Operative (Section 3.1)</th><th class="num">BGS Disabled</th><th class="num">Increase</th></tr>
+  <tr class="transition-row"><td>200,000 kg / 100% tiller</td><td class="num">25.10 m</td><td class="num">31.27 m</td><td class="num">+24.6%</td></tr>
+  <tr class="transition-row"><td>380,000 kg / 100% tiller</td><td class="num">25.09 m</td><td class="num">31.24 m</td><td class="num">+24.5%</td></tr>
+  <tr class="transition-row"><td>200,000 kg / 50% tiller</td><td class="num">53.27 m</td><td class="num">74.74 m</td><td class="num">+40.3%</td></tr>
+</table>
+<p>
+This effect is large, highly repeatable, weight-independent (matching the pattern established
+throughout this investigation), and consistent in direction with the manufacturer&rsquo;s own
+published data (Section 3.5), which also shows a larger radius with body gear steering
+inoperative. However, the <i>magnitude</i> of the effect measured here is substantially larger than
+the manufacturer&rsquo;s published figures suggest: at the same tightest tabulated condition, the
+manufacturer&rsquo;s data shows only a 96&nbsp;ft&nbsp;&rarr;&nbsp;91&nbsp;ft (29.3&nbsp;m&nbsp;
+&rarr;&nbsp;27.7&nbsp;m, &asymp;5.5%) change in nose gear radius between body gear steering
+inoperative and operative &mdash; roughly four to five times smaller, proportionally, than the
+24&ndash;40% increase measured here. The Board also notes that the 200,000&nbsp;kg / 50% tiller,
+BGS-disabled result (74.74&nbsp;m) closely matches the radius this investigation separately measured
+at 19&ndash;20&nbsp;kt in the high-speed sweep (Section 3.3, 74.70&nbsp;m), where body gear steering
+deactivates automatically due to speed rather than being electrically disabled &mdash; two
+independent methods of removing body gear steering converge on the same result, which the Board
+considers strong corroborating evidence that the effect measured is genuinely attributable to the
+absence of body gear steering, and not an artefact of the disabling method used.
+</p>
+
+
+<!-- ============ PAGE 4: DISCUSSION / CONCLUSIONS ============ -->
+
+<h2 class="section">4&nbsp;&nbsp;Discussion</h2>
+<p>
+The Board&rsquo;s most significant finding is Section 3.6: with body gear steering directly disabled
+(via the AC and DC BODY GR STRNG ARM circuit breakers), turn radius increases by 24&ndash;40%
+depending on tiller deflection, reproducibly and independent of aircraft weight. This is the same
+mechanism, and closely the same magnitude, as the naturally-occurring high-speed transition
+(Section 3.3/3.6 cross-check), and it directly matches the second forum poster&rsquo;s own
+characterisation of the problem &mdash; <i>&ldquo;It&rsquo;s like the body gear is not steering&rdquo;</i>
+&mdash; almost exactly. The Board considers it likely that at least some forum reports of an
+excessive turn radius reflect body gear steering not being active at the time: whether due to
+groundspeed above the 20&nbsp;kt deactivation threshold (Section 3.3), an electrical or hydraulic
+fault or misconfiguration on the reporting user&rsquo;s installation, or a momentary failure to
+re-arm below 15&nbsp;kt. Notably, the manufacturer&rsquo;s own published data confirms the same
+effect exists on the real aircraft, but at a substantially smaller magnitude (&asymp;5.5% versus the
+24&ndash;40% measured here) &mdash; raising the possibility that PSX&rsquo;s modelling of the
+body-gear-inoperative case specifically, rather than its normal (body-gear-operative) taxi model, may
+be the more precisely defective component, if any exists.
+</p>
+<p>
+Separately, the opening-up of radius above &asymp;18&nbsp;kt (Section 3.3) under normal (body-gear-
+operative) conditions is not weight-dependent and aligns with documented real-aircraft nosewheel
+and body-gear speed limits rather than appearing as an artefact of the simulation; a pilot
+maintaining a brisk taxi speed through a sharp turn at high tiller deflection would, correctly,
+experience a substantially larger turn radius than the same turn flown slower &mdash; behaviour that
+matches the real aircraft, but which may be surprising if the pilot is not aware of the underlying
+speed limits.
+</p>
+<p>
+The independently variable pushback-truck turn radius parameter (<code>Qi275</code>) was confirmed to
+have no coupling whatsoever to nosewheel-steered taxi behaviour under engine power, and can be
+excluded as a contributing factor. Likewise, no measurable difference was found between the bare
+simulation host and the full MSFS-linked visual configuration for PSX&rsquo;s own internal
+position/heading telemetry, excluding a physics-level visual-system coupling as a contributing
+factor for that telemetry specifically.
+</p>
+
+<h2 class="section">5&nbsp;&nbsp;Conclusions</h2>
+<ol>
+  <li>With body gear steering disabled, turn radius increases by 24&ndash;40% (weight-independent),
+      closely matching the naturally-occurring high-speed (body-gear-deactivated) condition and the
+      second forum poster&rsquo;s own description of the problem. This is the strongest single
+      finding of this investigation and a plausible direct explanation for at least some reports.</li>
+  <li>The <i>magnitude</i> of the body-gear-steering effect measured in the simulator is
+      4&ndash;5&times; larger, proportionally, than the manufacturer&rsquo;s own published data for the
+      equivalent inoperative-versus-operative comparison, which may itself warrant further
+      engineering attention independent of the forum reports.</li>
+  <li>With body gear steering operative, the simulated turn radius closely matches real-world
+      reference data at all tested combinations of weight, tiller deflection, and low-to-moderate
+      groundspeed.</li>
+  <li>Turn radius is not measurably affected by aircraft gross weight across the tested range
+      (200,000&ndash;380,000&nbsp;kg), under either body-gear-operative or body-gear-disabled
+      conditions.</li>
+  <li>A real, repeatable, weight-independent increase in turn radius occurs above approximately
+      18&nbsp;kt groundspeed under normal (body-gear-operative) conditions, consistent with known
+      real-aircraft nosewheel and body-gear-steering speed limits, and is not evidence of a
+      simulation defect in its own right.</li>
+  <li><code>Qi275</code> (&ldquo;TowTurnRadius&rdquo;) and MSFS-linked visual configuration (PSX&rsquo;s
+      own internal telemetry) are both excluded as contributing factors.</li>
+</ol>
+
+<h2 class="section">6&nbsp;&nbsp;Recommendations</h2>
+<ol>
+  <li>Priority: investigate why the simulator&rsquo;s body-gear-inoperative turn radius is
+      proportionally 4&ndash;5&times; larger than the manufacturer&rsquo;s published data for the same
+      comparison (Section 3.6, Conclusion 2), independent of whether it explains the forum reports.
+      This is the most concrete, quantified, and actionable finding of this investigation.</li>
+  <li>Reporting pilots should be asked to confirm groundspeed at the time of the turn, and whether
+      any electrical or hydraulic malfunction/circuit-breaker state could have disabled body gear
+      steering, before further reports are treated as unexplained. A future revision of this
+      harness could poll the body-gear-steering indication directly, if exposed on the simulator
+      network, to confirm its state at the moment a wide radius is observed.</li>
+  <li>Should further reports specifically describe large-radius turns at elevated taxi speed
+      (&gt;18&nbsp;kt) with body gear steering confirmed operative, pilots should be advised this is
+      expected behaviour consistent with real-aircraft nosewheel/body-gear limits, and not
+      indicative of a fault.</li>
+  <li>Repeat the low-speed matrix using the documented minimum-radius technique exactly (outboard-
+      engine-only thrust, inside-main-gear-only intermittent braking; see Ref. 3) rather than this
+      investigation&rsquo;s symmetric thrust/braking approach, to determine whether the small
+      remaining discrepancy between measured and published radii (Section 3.5) narrows further
+      under matched technique.</li>
+</ol>
+
+<h2 class="section">7&nbsp;&nbsp;References</h2>
+<ol>
+  <li><b>[Ref. 1]</b> Boeing, <i>747-400 Airplane Characteristics for Airport Planning</i>, Document
+      D6-58326-1, Revision F, December 2024 (publicly published by the manufacturer). Directly
+      retrieved and consulted by the Board. Source for: clearance radii by steering condition
+      (Section 4.3, used in Section 3.5 of this report), minimum pavement width for a 180&deg; turn,
+      and general turning-geometry factors (Section 4.1).</li>
+  <li><b>[Ref. 2]</b> 747 Flight Crew Operations Manual (airline-specific edition; on file with the
+      pilot-community member supporting this investigation, publisher/operator not identified in this
+      report). Directly consulted by the Board. Source for: maximum tiller-commanded nose wheel
+      steering angle (70&deg;), rudder-pedal steering limit (7&deg;), and body gear steering
+      activation logic (engages above 20&deg; nose wheel steering angle; activates as groundspeed
+      decreases through 15&nbsp;kt; deactivates as groundspeed increases through 20&nbsp;kt).</li>
+  <li><b>[Ref. 3]</b> 747 Flight Crew Training Manual (same edition/provenance as Ref. 2). Directly
+      consulted by the Board. Source for the documented technique for a minimum-radius 180&deg; turn:
+      maintain 5&ndash;10&nbsp;kt, use only the outboard-side engines (asymmetric/differential
+      thrust), and apply light intermittent braking to the <i>inside</i> main gear only. This
+      investigation&rsquo;s harness instead used symmetric thrust across all engines and symmetric
+      brake pulses for methodological simplicity and repeatability; see Section 6, Recommendation 4.</li>
+  <li><b>[Ref. 4]</b> Maximum body gear counter-steer angle (13&deg;) &mdash; Havayolu101,
+      &ldquo;Body Gear Steering on the Boeing 747&rdquo; (2019); independently corroborated by
+      operational input from the pilot-community member supporting this investigation, but not
+      independently confirmed in Refs. 1&ndash;3 as consulted.</li>
+  <li><b>[Ref. 5]</b> PSX user forum thread, Aerowinx Board, topic 8024, July 2026
+      (aerowinx.com/board/index.php/topic,8024.0.html; individual poster identities withheld in this
+      report). Source for the background
+      in Section 1, including the second poster&rsquo;s &ldquo;like the body gear is not
+      steering&rdquo; characterisation (motivating Section 3.6) and the simulator developer&rsquo;s
+      own retest figure of 25&nbsp;m turn radius at 5&nbsp;kt, 100% tiller &mdash; the latter not
+      independently traced to a primary publication beyond the thread itself, but consistent with
+      this Board&rsquo;s own measurement (25.10&nbsp;m) to within instrumentation precision.</li>
+  <li><b>[Not relied upon]</b> A figure of 23.15&nbsp;m circulating informally, and a detailed
+      R&#8321;&ndash;R&#8324; sub-radii table obtained via an AI-generated search summary, were
+      considered but rejected: neither could be traced to a verifiable primary source, and the
+      latter&rsquo;s round-imperial-to-precise-metric conversion pattern is characteristic of
+      synthesized rather than primary-sourced figures. Where the AI-generated summary&rsquo;s figures
+      happened to coincide with Ref. 1 (minimum pavement width), Ref. 1 is cited instead.</li>
+</ol>
+
+<h2 class="section">8&nbsp;&nbsp;Acknowledgements</h2>
+<p>
+This investigation would not have been possible without the openness of the PSX user community,
+whose forum reports gave the Board a concrete problem to pursue and whose operational knowledge
+repeatedly corrected and sharpened the Board&rsquo;s own testing technique over the course of this
+work. The Board also gratefully acknowledges <b>CONAIR Technics</b>, and in particular its Vice
+President, <b>Se&ntilde;or Cousin</b>, for ground-handling and hydraulic systems support during the
+body gear steering trials (Section 3.6), and the
+<b>Fuerza A&eacute;rea de Liberaci&oacute;n Pinguino (FALP)</b> for airfield access and general
+cooperation throughout. Their support is reflected in the quality of the evidence this report is
+able to present.
+</p>
+<p class="caveat">&mdash; Chief Investigator Claude, PAIB</p>
+
+<div class="signoff">
+  <table>
+    <tr><td>Chief Investigator:</td></tr>
+    <tr><td class="sigline">Claude &mdash; Automated Test &amp; Analysis Unit, Penguin Accident
+        Investigation Board</td></tr>
+  </table>
+</div>
+
+
+</body>
+</html>

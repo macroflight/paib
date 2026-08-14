@@ -1,0 +1,48 @@
+09:28:56  Ready. lat=12.191440 lon=-68.974956 heading=210.7
+09:28:56  Setting weight: gross=200.0t, target fuel=5.0t (stepped fill)
+09:28:56  -> mains achieved: 7875 kg ([1970, 1968, 1968, 1970])
+09:28:56  NOTE: fuel shortfall -2875 kg vs target, compensating via ZFW
+09:28:56  -> TrueZfw=423564 (192.1t), actual gross=200.0t
+09:28:57  Releasing parking brake: Brakes=1000;1000 -> 0;0
+09:28:59  Applying tiller = 500 (50.0%), breakaway tla=0.0
+09:28:59  Breakaway achieved at 8.48 kt (0.3s), reducing to idle
+09:28:59  Pilot mode: 8.6 kt > 6.5, pulsing 50% brake
+09:29:03  Pilot mode: 2.8 kt <= 3.5, releasing brake
+09:29:17  Pilot mode: 6.5 kt > 6.5, pulsing 50% brake
+09:29:20  Pilot mode: 3.0 kt <= 3.5, releasing brake
+09:29:34  Pilot mode: 6.6 kt > 6.5, pulsing 50% brake
+09:29:37  Pilot mode: 2.7 kt <= 3.5, releasing brake
+09:29:53  Pilot mode: 6.6 kt > 6.5, pulsing 50% brake
+09:29:56  Pilot mode: 2.5 kt <= 3.5, releasing brake
+09:30:15  Pilot mode: 6.5 kt > 6.5, pulsing 50% brake
+09:30:18  Pilot mode: 2.7 kt <= 3.5, releasing brake
+09:30:35  Pilot mode: 6.5 kt > 6.5, pulsing 50% brake
+09:30:38  Pilot mode: 3.1 kt <= 3.5, releasing brake
+09:30:53  Pilot mode: 6.5 kt > 6.5, pulsing 50% brake
+09:30:55  Pilot mode: 3.5 kt <= 3.5, releasing brake
+09:31:08  Pilot mode: 6.5 kt > 6.5, pulsing 50% brake
+09:31:11  Pilot mode: 2.7 kt <= 3.5, releasing brake
+09:31:26  Stopping: 361.4 deg turned in 146.6s, 713 samples
+09:31:26  Returning tiller to center
+09:31:26  Pilot mode: braking smoothly to a stop
+09:31:29  Stopped (0.03 kt)
+09:31:31  Setting parking brake: Brakes=1000;1000 -> Qh397=1 -> 0;0
+09:31:34  ======================================================================
+09:31:34  RESULT weight=200.0t tiller=50.0% tla=0.0
+09:31:34    718 valid (speed, radius) samples
+09:31:34    ~ 1 kt: radius median= 53.32 m ( 174.9 ft)  n=1 min=53.32 max=53.32
+09:31:34    ~ 2 kt: radius median= 53.33 m ( 175.0 ft)  n=94 min=52.35 max=53.39
+09:31:34    ~ 3 kt: radius median= 53.30 m ( 174.9 ft)  n=126 min=52.33 max=53.34
+09:31:34    ~ 4 kt: radius median= 53.28 m ( 174.8 ft)  n=132 min=52.39 max=53.30
+09:31:34    ~ 5 kt: radius median= 53.27 m ( 174.8 ft)  n=139 min=52.54 max=53.29
+09:31:34    ~ 6 kt: radius median= 53.26 m ( 174.7 ft)  n=153 min=52.75 max=366.49
+09:31:34    ~ 7 kt: radius median= 53.24 m ( 174.7 ft)  n=52 min=52.84 max=53.26
+09:31:34    ~ 8 kt: radius median= 53.15 m ( 174.4 ft)  n=7 min=52.91 max=53.25
+09:31:34    ~ 9 kt: radius median= 53.23 m ( 174.6 ft)  n=10 min=53.02 max=53.25
+09:31:34    ~10 kt: radius median= 53.02 m ( 173.9 ft)  n=2 min=53.01 max=53.03
+09:31:34    ~11 kt: radius median= 53.10 m ( 174.2 ft)  n=2 min=53.07 max=53.13
+09:31:34    Sanity check @5kt: 53.27 m (reference ballpark: 23-25 m)
+09:31:34  ======================================================================
+09:31:34  Log written: /tmp/claude-1000/-home-kronberg-psxhacks/a46b2231-3315-403e-9129-33c916b96cba/scratchpad/roll_200t_50pct_tla0_20260814_092853.csv
+
+[exited with code 0]

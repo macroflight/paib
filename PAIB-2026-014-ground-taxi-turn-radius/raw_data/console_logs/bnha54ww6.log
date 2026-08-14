@@ -1,0 +1,40 @@
+09:46:56  Ready. lat=12.191122 lon=-68.975539 heading=208.6
+09:46:56  Setting weight: gross=380.0t, target fuel=130.0t (stepped fill)
+09:47:15  -> mains achieved: 92241 kg ([13621, 32500, 32500, 13621])
+09:47:16  -> center achieved: 37759 kg (target was 37759 kg)
+09:47:16  -> TrueZfw=551155 (250.0t), actual gross=380.0t
+09:47:17  Releasing parking brake: Brakes=1000;1000 -> 0;0
+09:47:19  Applying tiller = 500 (50.0%), breakaway tla=800.0
+09:47:24  Breakaway achieved at 0.56 kt (4.8s), holding power (continuous-power mode)
+09:47:49  ABORT: speed 20.2 kt exceeds safety limit
+09:47:49  Stopping: 127.6 deg turned in 25.0s, 127 samples
+09:47:49  Returning tiller to center
+09:47:51  Setting parking brake: Brakes=1000;1000 -> Qh397=1 -> 0;0
+09:47:54  ======================================================================
+09:47:54  RESULT weight=380.0t tiller=50.0% tla=800.0
+09:47:54    116 valid (speed, radius) samples
+09:47:54    ~ 1 kt: radius median= 53.58 m ( 175.8 ft)  n=4 min=53.53 max=53.63
+09:47:54    ~ 2 kt: radius median= 53.45 m ( 175.4 ft)  n=8 min=53.41 max=53.51
+09:47:54    ~ 3 kt: radius median= 53.38 m ( 175.1 ft)  n=7 min=53.36 max=53.40
+09:47:54    ~ 4 kt: radius median= 53.35 m ( 175.0 ft)  n=7 min=53.34 max=53.36
+09:47:54    ~ 5 kt: radius median= 53.33 m ( 175.0 ft)  n=7 min=53.32 max=53.33
+09:47:54    ~ 6 kt: radius median= 53.31 m ( 174.9 ft)  n=6 min=53.31 max=53.32
+09:47:54    ~ 7 kt: radius median= 53.30 m ( 174.9 ft)  n=7 min=53.30 max=53.31
+09:47:54    ~ 8 kt: radius median= 53.30 m ( 174.9 ft)  n=6 min=53.30 max=53.30
+09:47:54    ~ 9 kt: radius median= 53.29 m ( 174.8 ft)  n=5 min=53.29 max=53.30
+09:47:54    ~10 kt: radius median= 53.29 m ( 174.8 ft)  n=6 min=53.28 max=53.29
+09:47:54    ~11 kt: radius median= 53.28 m ( 174.8 ft)  n=6 min=53.28 max=53.28
+09:47:54    ~12 kt: radius median= 53.28 m ( 174.8 ft)  n=5 min=53.28 max=53.28
+09:47:54    ~13 kt: radius median= 53.27 m ( 174.8 ft)  n=5 min=53.27 max=53.28
+09:47:54    ~14 kt: radius median= 53.27 m ( 174.8 ft)  n=6 min=53.27 max=53.27
+09:47:54    ~15 kt: radius median= 53.27 m ( 174.8 ft)  n=5 min=53.27 max=53.27
+09:47:54    ~16 kt: radius median= 53.27 m ( 174.8 ft)  n=5 min=53.26 max=53.27
+09:47:54    ~17 kt: radius median= 53.26 m ( 174.7 ft)  n=6 min=53.26 max=53.26
+09:47:54    ~18 kt: radius median= 54.05 m ( 177.3 ft)  n=5 min=53.26 max=61.25
+09:47:54    ~19 kt: radius median= 74.72 m ( 245.1 ft)  n=5 min=65.51 max=74.72
+09:47:54    ~20 kt: radius median= 74.74 m ( 245.2 ft)  n=5 min=74.72 max=74.75
+09:47:54    Sanity check @5kt: 53.33 m (reference ballpark: 23-25 m)
+09:47:54  ======================================================================
+09:47:54  Log written: /tmp/claude-1000/-home-kronberg-psxhacks/a46b2231-3315-403e-9129-33c916b96cba/scratchpad/roll_380t_50pct_tla800_20260814_094653.csv
+
+[exited with code 0]

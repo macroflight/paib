@@ -1,0 +1,39 @@
+08:20:59  Ready. lat=12.192232 lon=-68.975384 heading=101.8
+08:20:59  Setting weight: gross=380.0t, target fuel=130.0t (stepped fill)
+08:21:02  -> mains achieved: 92241 kg ([13621, 32500, 32500, 13621])
+08:21:03  -> center achieved: 37759 kg (target was 37759 kg)
+08:21:03  -> TrueZfw=551155 (250.0t), actual gross=380.0t
+08:21:05  Releasing parking brake: Brakes=1000;1000 -> 0;0
+08:21:07  Applying tiller = 999 (100.0%), tla=800.0 fixed
+08:21:32  ABORT: speed 20.1 kt exceeds safety limit
+08:21:32  Stopping: 267.3 deg turned in 24.8s, 129 samples
+08:21:34  Setting parking brake: Brakes=1000;1000 -> Qh397=1 -> 0;0
+08:21:37  ======================================================================
+08:21:37  RESULT weight=380.0t tiller=100.0% tla=800.0
+08:21:37    119 valid (speed, radius) samples
+08:21:37    ~ 0 kt: radius mean= 25.52 m (  83.7 ft)  n=1 min=25.52 max=25.52
+08:21:37    ~ 1 kt: radius mean= 25.30 m (  83.0 ft)  n=8 min=25.23 max=25.43
+08:21:37    ~ 2 kt: radius mean= 25.19 m (  82.7 ft)  n=7 min=25.17 max=25.22
+08:21:37    ~ 3 kt: radius mean= 25.16 m (  82.5 ft)  n=7 min=25.15 max=25.17
+08:21:37    ~ 4 kt: radius mean= 25.14 m (  82.5 ft)  n=7 min=25.14 max=25.15
+08:21:37    ~ 5 kt: radius mean= 25.13 m (  82.4 ft)  n=7 min=25.13 max=25.13
+08:21:37    ~ 6 kt: radius mean= 25.12 m (  82.4 ft)  n=7 min=25.12 max=25.13
+08:21:37    ~ 7 kt: radius mean= 25.12 m (  82.4 ft)  n=6 min=25.12 max=25.12
+08:21:37    ~ 8 kt: radius mean= 25.12 m (  82.4 ft)  n=6 min=25.12 max=25.12
+08:21:37    ~ 9 kt: radius mean= 25.11 m (  82.4 ft)  n=7 min=25.11 max=25.12
+08:21:37    ~10 kt: radius mean= 25.11 m (  82.4 ft)  n=6 min=25.11 max=25.11
+08:21:37    ~11 kt: radius mean= 25.11 m (  82.4 ft)  n=5 min=25.11 max=25.11
+08:21:37    ~12 kt: radius mean= 25.11 m (  82.4 ft)  n=5 min=25.11 max=25.11
+08:21:37    ~13 kt: radius mean= 25.11 m (  82.4 ft)  n=5 min=25.11 max=25.11
+08:21:37    ~14 kt: radius mean= 25.11 m (  82.4 ft)  n=4 min=25.11 max=25.11
+08:21:37    ~15 kt: radius mean= 25.10 m (  82.4 ft)  n=5 min=25.10 max=25.11
+08:21:37    ~16 kt: radius mean= 25.10 m (  82.3 ft)  n=5 min=25.10 max=25.10
+08:21:37    ~17 kt: radius mean= 25.10 m (  82.3 ft)  n=5 min=25.10 max=25.10
+08:21:37    ~18 kt: radius mean= 27.24 m (  89.4 ft)  n=6 min=25.10 max=30.15
+08:21:37    ~19 kt: radius mean= 31.24 m ( 102.5 ft)  n=6 min=31.24 max=31.24
+08:21:37    ~20 kt: radius mean= 31.24 m ( 102.5 ft)  n=4 min=31.24 max=31.24
+08:21:37    Sanity check @5kt: 25.13 m (reference ballpark: 23-25 m)
+08:21:37  ======================================================================
+08:21:37  Log written: /tmp/claude-1000/-home-kronberg-psxhacks/a46b2231-3315-403e-9129-33c916b96cba/scratchpad/roll_380t_100pct_tla800_20260814_082056.csv
+
+[exited with code 0]

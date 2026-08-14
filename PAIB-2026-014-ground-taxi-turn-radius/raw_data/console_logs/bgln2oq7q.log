@@ -1,0 +1,50 @@
+10:54:00  Ready. lat=12.192213 lon=-68.975329 heading=106.0
+10:54:00  Setting weight: gross=200.0t, target fuel=5.0t (stepped fill)
+10:54:02  -> mains achieved: 5000 kg ([1250, 1250, 1250, 1250])
+10:54:02  -> center achieved: 0 kg (target was 0 kg)
+10:54:02  -> TrueZfw=429901 (195.0t), actual gross=200.0t
+10:54:03  Releasing parking brake: Brakes=1000;1000 -> 0;0
+10:54:05  Applying tiller = 500 (50.0%), breakaway tla=0.0
+10:54:06  Breakaway achieved at 0.40 kt (1.0s), reducing to idle
+10:54:24  Pilot mode: 6.6 kt > 6.5, pulsing 50% brake
+10:54:26  Pilot mode: 2.6 kt <= 3.5, releasing brake
+10:54:42  Pilot mode: 6.9 kt > 6.5, pulsing 50% brake
+10:54:44  Pilot mode: 2.9 kt <= 3.5, releasing brake
+10:55:00  Pilot mode: 7.0 kt > 6.5, pulsing 50% brake
+10:55:02  Pilot mode: 3.3 kt <= 3.5, releasing brake
+10:55:15  Pilot mode: 6.5 kt > 6.5, pulsing 50% brake
+10:55:17  Pilot mode: 2.3 kt <= 3.5, releasing brake
+10:55:32  Pilot mode: 6.6 kt > 6.5, pulsing 50% brake
+10:55:35  Pilot mode: 3.2 kt <= 3.5, releasing brake
+10:55:49  Pilot mode: 6.6 kt > 6.5, pulsing 50% brake
+10:55:52  Pilot mode: 2.4 kt <= 3.5, releasing brake
+10:56:06  Pilot mode: 6.5 kt > 6.5, pulsing 50% brake
+10:56:08  Pilot mode: 2.9 kt <= 3.5, releasing brake
+10:56:23  Pilot mode: 6.5 kt > 6.5, pulsing 50% brake
+10:56:26  Pilot mode: 2.7 kt <= 3.5, releasing brake
+10:56:43  Pilot mode: 6.6 kt > 6.5, pulsing 50% brake
+10:56:46  Pilot mode: 3.0 kt <= 3.5, releasing brake
+10:57:05  Pilot mode: 6.5 kt > 6.5, pulsing 50% brake
+10:57:07  Pilot mode: 2.7 kt <= 3.5, releasing brake
+10:57:25  Pilot mode: 6.5 kt > 6.5, pulsing 50% brake
+10:57:27  Pilot mode: 3.5 kt <= 3.5, releasing brake
+10:57:38  Stopping: 360.8 deg turned in 211.8s, 1025 samples
+10:57:38  Returning tiller to center
+10:57:38  Pilot mode: braking smoothly to a stop
+10:57:41  Stopped (0.10 kt)
+10:57:43  Setting parking brake: Brakes=1000;1000 -> Qh397=1 -> 0;0
+10:57:46  ======================================================================
+10:57:46  RESULT weight=200.0t tiller=50.0% tla=0.0
+10:57:46    1006 valid (speed, radius, turn-rate) samples
+10:57:46    ~ 1 kt: radius median= 74.94 m ( 245.9 ft)  turn_rate= 0.55 deg/s  n=4 min=74.90 max=74.98
+10:57:46    ~ 2 kt: radius median= 74.85 m ( 245.6 ft)  turn_rate= 0.83 deg/s  n=131 min=73.27 max=74.92
+10:57:46    ~ 3 kt: radius median= 74.79 m ( 245.4 ft)  turn_rate= 1.20 deg/s  n=181 min=73.20 max=74.85
+10:57:46    ~ 4 kt: radius median= 74.76 m ( 245.3 ft)  turn_rate= 1.58 deg/s  n=203 min=73.39 max=74.81
+10:57:46    ~ 5 kt: radius median= 74.74 m ( 245.2 ft)  turn_rate= 1.97 deg/s  n=209 min=73.72 max=74.79
+10:57:46    ~ 6 kt: radius median= 74.73 m ( 245.2 ft)  turn_rate= 2.36 deg/s  n=211 min=74.10 max=232.53
+10:57:46    ~ 7 kt: radius median= 74.70 m ( 245.1 ft)  turn_rate= 2.61 deg/s  n=67 min=74.54 max=74.74
+10:57:46    Sanity check @5kt: 74.74 m (reference ballpark: 23-25 m)
+10:57:46  ======================================================================
+10:57:46  Log written: /tmp/claude-1000/-home-kronberg-psxhacks/a46b2231-3315-403e-9129-33c916b96cba/scratchpad/roll_200t_50pct_tla0_20260814_105358.csv
+
+[exited with code 0]

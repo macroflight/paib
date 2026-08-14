@@ -1,0 +1,40 @@
+10:16:15  Ready. lat=12.191573 lon=-68.976983 heading=309.1
+10:16:15  Setting weight: gross=200.0t, target fuel=5.0t (stepped fill)
+10:16:16  -> mains achieved: 4998 kg ([1250, 1250, 1250, 1250])
+10:16:18  -> center achieved: 2 kg (target was 2 kg)
+10:16:18  -> TrueZfw=429901 (195.0t), actual gross=200.0t
+10:16:19  Releasing parking brake: Brakes=1000;1000 -> 0;0
+10:16:21  Applying tiller = 500 (50.0%), breakaway tla=500.0
+10:16:22  Breakaway achieved at 0.43 kt (0.9s), holding power (continuous-power mode)
+10:17:08  ABORT: speed 20.1 kt exceeds safety limit
+10:17:08  Stopping: 269.1 deg turned in 46.0s, 229 samples
+10:17:08  Returning tiller to center
+10:17:10  Setting parking brake: Brakes=1000;1000 -> Qh397=1 -> 0;0
+10:17:12  ======================================================================
+10:17:12  RESULT weight=200.0t tiller=50.0% tla=500.0
+10:17:12    213 valid (speed, radius, turn-rate) samples
+10:17:12    ~ 1 kt: radius median= 53.47 m ( 175.4 ft)  turn_rate= 0.64 deg/s  n=7 min=53.46 max=53.53
+10:17:12    ~ 2 kt: radius median= 53.47 m ( 175.4 ft)  turn_rate= 1.06 deg/s  n=9 min=53.44 max=53.49
+10:17:12    ~ 3 kt: radius median= 53.37 m ( 175.1 ft)  turn_rate= 1.64 deg/s  n=8 min=53.36 max=53.43
+10:17:12    ~ 4 kt: radius median= 53.35 m ( 175.0 ft)  turn_rate= 2.21 deg/s  n=8 min=53.34 max=53.36
+10:17:12    ~ 5 kt: radius median= 53.32 m ( 174.9 ft)  turn_rate= 2.76 deg/s  n=8 min=53.31 max=53.34
+10:17:12    ~ 6 kt: radius median= 53.30 m ( 174.9 ft)  turn_rate= 3.31 deg/s  n=8 min=53.30 max=53.31
+10:17:12    ~ 7 kt: radius median= 53.29 m ( 174.8 ft)  turn_rate= 3.89 deg/s  n=9 min=53.28 max=53.29
+10:17:12    ~ 8 kt: radius median= 53.28 m ( 174.8 ft)  turn_rate= 4.46 deg/s  n=8 min=53.28 max=53.29
+10:17:12    ~ 9 kt: radius median= 53.28 m ( 174.8 ft)  turn_rate= 4.93 deg/s  n=8 min=53.27 max=53.28
+10:17:12    ~10 kt: radius median= 53.26 m ( 174.8 ft)  turn_rate= 5.51 deg/s  n=11 min=53.26 max=53.27
+10:17:12    ~11 kt: radius median= 53.26 m ( 174.7 ft)  turn_rate= 6.09 deg/s  n=11 min=53.25 max=53.26
+10:17:12    ~12 kt: radius median= 53.25 m ( 174.7 ft)  turn_rate= 6.60 deg/s  n=14 min=53.25 max=53.25
+10:17:12    ~13 kt: radius median= 53.24 m ( 174.7 ft)  turn_rate= 7.16 deg/s  n=17 min=53.24 max=53.25
+10:17:12    ~14 kt: radius median= 53.24 m ( 174.7 ft)  turn_rate= 7.78 deg/s  n=18 min=53.24 max=53.25
+10:17:12    ~15 kt: radius median= 53.25 m ( 174.7 ft)  turn_rate= 8.38 deg/s  n=19 min=53.25 max=53.25
+10:17:12    ~16 kt: radius median= 53.24 m ( 174.7 ft)  turn_rate= 8.93 deg/s  n=12 min=53.24 max=53.25
+10:17:12    ~17 kt: radius median= 53.24 m ( 174.7 ft)  turn_rate= 9.44 deg/s  n=17 min=53.24 max=53.24
+10:17:12    ~18 kt: radius median= 53.67 m ( 176.1 ft)  turn_rate= 9.72 deg/s  n=8 min=53.24 max=65.64
+10:17:12    ~19 kt: radius median= 74.71 m ( 245.1 ft)  turn_rate= 7.48 deg/s  n=10 min=70.62 max=74.71
+10:17:12    ~20 kt: radius median= 74.71 m ( 245.1 ft)  turn_rate= 7.71 deg/s  n=3 min=74.71 max=74.71
+10:17:12    Sanity check @5kt: 53.32 m (reference ballpark: 23-25 m)
+10:17:12  ======================================================================
+10:17:12  Log written: /tmp/claude-1000/-home-kronberg-psxhacks/a46b2231-3315-403e-9129-33c916b96cba/scratchpad/roll_200t_50pct_tla500_20260814_101613.csv
+
+[exited with code 0]

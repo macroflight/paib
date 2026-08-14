@@ -1,0 +1,35 @@
+09:34:14  Ready. lat=12.191227 lon=-68.975194 heading=242.9
+09:34:14  Setting weight: gross=380.0t, target fuel=130.0t (stepped fill)
+09:34:17  -> mains achieved: 92241 kg ([13621, 32500, 32500, 13621])
+09:34:18  -> center achieved: 37759 kg (target was 37759 kg)
+09:34:18  -> TrueZfw=551155 (250.0t), actual gross=380.0t
+09:34:19  Releasing parking brake: Brakes=1000;1000 -> 0;0
+09:34:21  Applying tiller = 500 (50.0%), breakaway tla=500.0
+09:34:27  Breakaway achieved at 0.46 kt (5.3s), reducing to idle
+09:35:07  Pilot mode: 6.6 kt > 6.5, pulsing 50% brake
+09:35:09  Pilot mode: 2.9 kt <= 3.5, releasing brake
+09:35:52  Pilot mode: 6.5 kt > 6.5, pulsing 50% brake
+09:35:55  Pilot mode: 2.9 kt <= 3.5, releasing brake
+09:36:38  ABORT: speed 21.5 kt exceeds safety limit
+09:36:38  Stopping: 282.1 deg turned in 131.7s, 594 samples
+09:36:38  Returning tiller to center
+09:36:38  Pilot mode: braking smoothly to a stop
+09:36:42  Stopped (0.00 kt)
+09:36:44  Setting parking brake: Brakes=1000;1000 -> Qh397=1 -> 0;0
+09:36:47  ======================================================================
+09:36:47  RESULT weight=380.0t tiller=50.0% tla=500.0
+09:36:47    585 valid (speed, radius) samples
+09:36:47    ~ 1 kt: radius median= 53.31 m ( 174.9 ft)  n=21 min=53.29 max=53.33
+09:36:47    ~ 2 kt: radius median= 53.27 m ( 174.8 ft)  n=70 min=52.65 max=53.29
+09:36:47    ~ 3 kt: radius median= 53.26 m ( 174.7 ft)  n=109 min=52.58 max=53.33
+09:36:47    ~ 4 kt: radius median= 53.25 m ( 174.7 ft)  n=116 min=52.57 max=240.43
+09:36:47    ~ 5 kt: radius median= 53.24 m ( 174.7 ft)  n=127 min=52.85 max=206.31
+09:36:47    ~ 6 kt: radius median= 53.24 m ( 174.7 ft)  n=127 min=53.00 max=152.78
+09:36:47    ~ 7 kt: radius median= 53.24 m ( 174.7 ft)  n=13 min=53.17 max=70.81
+09:36:47    ~ 9 kt: radius median= 57.05 m ( 187.2 ft)  n=1 min=57.05 max=57.05
+09:36:47    ~10 kt: radius median= 59.85 m ( 196.3 ft)  n=1 min=59.85 max=59.85
+09:36:47    Sanity check @5kt: 53.24 m (reference ballpark: 23-25 m)
+09:36:47  ======================================================================
+09:36:47  Log written: /tmp/claude-1000/-home-kronberg-psxhacks/a46b2231-3315-403e-9129-33c916b96cba/scratchpad/roll_380t_50pct_tla500_20260814_093411.csv
+
+[exited with code 0]

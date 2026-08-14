@@ -1,0 +1,29 @@
+08:22:59  Ready. lat=12.192232 lon=-68.975384 heading=101.8
+08:22:59  Setting weight: gross=380.0t, target fuel=130.0t (stepped fill)
+08:23:22  -> mains achieved: 92242 kg ([13621, 32500, 32500, 13621])
+08:23:46  -> center achieved: 37757 kg (target was 37758 kg)
+08:23:46  -> TrueZfw=551157 (250.0t), actual gross=380.0t
+08:23:47  Releasing parking brake: Brakes=1000;1000 -> 0;0
+08:23:49  Applying tiller = 500 (50.0%), breakaway tla=500.0
+08:23:54  Breakaway achieved at 0.48 kt (5.2s), reducing to idle
+08:25:33  Stopping: 361.5 deg turned in 98.4s, 480 samples
+08:25:35  Setting parking brake: Brakes=1000;1000 -> Qh397=1 -> 0;0
+08:25:37  ======================================================================
+08:25:37  RESULT weight=380.0t tiller=50.0% tla=500.0
+08:25:37    457 valid (speed, radius) samples
+08:25:37    ~ 1 kt: radius mean= 53.30 m ( 174.9 ft)  n=24 min=53.28 max=53.32
+08:25:37    ~ 2 kt: radius mean= 53.27 m ( 174.8 ft)  n=38 min=53.26 max=53.28
+08:25:37    ~ 3 kt: radius mean= 53.26 m ( 174.7 ft)  n=38 min=53.26 max=53.26
+08:25:37    ~ 4 kt: radius mean= 53.25 m ( 174.7 ft)  n=37 min=53.25 max=53.26
+08:25:37    ~ 5 kt: radius mean= 53.25 m ( 174.7 ft)  n=38 min=53.24 max=53.25
+08:25:37    ~ 6 kt: radius mean= 53.24 m ( 174.7 ft)  n=36 min=53.24 max=53.24
+08:25:37    ~ 7 kt: radius mean= 53.24 m ( 174.7 ft)  n=31 min=53.24 max=53.24
+08:25:37    ~ 8 kt: radius mean= 53.24 m ( 174.7 ft)  n=32 min=53.24 max=53.24
+08:25:37    ~ 9 kt: radius mean= 53.24 m ( 174.7 ft)  n=32 min=53.24 max=53.24
+08:25:37    ~10 kt: radius mean= 53.23 m ( 174.6 ft)  n=85 min=53.22 max=53.24
+08:25:37    ~11 kt: radius mean= 53.23 m ( 174.6 ft)  n=66 min=53.22 max=53.23
+08:25:37    Sanity check @5kt: 53.25 m (reference ballpark: 23-25 m)
+08:25:37  ======================================================================
+08:25:37  Log written: /tmp/claude-1000/-home-kronberg-psxhacks/a46b2231-3315-403e-9129-33c916b96cba/scratchpad/roll_380t_50pct_tla500_20260814_082257.csv
+
+[exited with code 0]
