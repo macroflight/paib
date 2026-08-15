@@ -1,0 +1,33 @@
+15:21:10  Ready. lat=12.192232 lon=-68.975384 heading=101.8
+15:21:10  Setting weight: gross=200.0t, target fuel=5.0t (stepped fill)
+15:21:11  -> mains achieved: 5000 kg ([1250, 1250, 1250, 1250])
+15:21:11  -> center achieved: 0 kg (target was 0 kg)
+15:21:11  -> TrueZfw=429901 (195.0t), actual gross=200.0t
+15:21:12  Releasing parking brake: Brakes=1000;1000 -> 0;0
+15:21:14  Applying tiller = 999 (100.0%), breakaway tla=0.0
+15:21:15  Breakaway achieved at 0.51 kt (1.2s), reducing to idle
+15:21:35  Pilot mode: 6.6 kt > 6.5, pulsing 50% brake
+15:21:38  Pilot mode: 2.9 kt <= 3.5, releasing brake
+15:21:51  Pilot mode: 6.5 kt > 6.5, pulsing 50% brake
+15:21:54  Pilot mode: 3.5 kt <= 3.5, releasing brake
+15:22:05  Stopping: 361.6 deg turned in 50.0s, 248 samples
+15:22:05  Returning tiller to center
+15:22:05  Pilot mode: braking smoothly to a stop
+15:22:09  Stopped (0.14 kt)
+15:22:11  Setting parking brake: Brakes=1000;1000 -> Qh397=1 -> 0;0
+15:22:13  ======================================================================
+15:22:13  RESULT weight=200.0t tiller=100.0% tla=0.0
+15:22:13    250 valid (speed, radius, turn-rate) samples
+15:22:13    ~ 0 kt: radius median= 19.95 m (  65.4 ft)  turn_rate= 0.63 deg/s  n=2 min=19.02 max=20.88
+15:22:13    ~ 1 kt: radius median= 16.79 m (  55.1 ft)  turn_rate= 1.75 deg/s  n=17 min=16.77 max=18.08
+15:22:13    ~ 2 kt: radius median= 16.76 m (  55.0 ft)  turn_rate= 3.75 deg/s  n=23 min=16.61 max=16.76
+15:22:13    ~ 3 kt: radius median= 16.74 m (  54.9 ft)  turn_rate= 5.39 deg/s  n=46 min=16.51 max=16.75
+15:22:13    ~ 4 kt: radius median= 16.74 m (  54.9 ft)  turn_rate= 7.04 deg/s  n=51 min=16.51 max=16.75
+15:22:13    ~ 5 kt: radius median= 16.73 m (  54.9 ft)  turn_rate= 8.80 deg/s  n=51 min=16.54 max=262.43
+15:22:13    ~ 6 kt: radius median= 16.73 m (  54.9 ft)  turn_rate=10.33 deg/s  n=44 min=16.62 max=118.85
+15:22:13    ~ 7 kt: radius median= 16.73 m (  54.9 ft)  turn_rate=11.78 deg/s  n=16 min=16.69 max=16.73
+15:22:13    Sanity check @5kt: 16.73 m (reference ballpark: 23-25 m)
+15:22:13  ======================================================================
+15:22:13  Log written: /tmp/claude-1000/-home-kronberg-psxhacks/a46b2231-3315-403e-9129-33c916b96cba/scratchpad/roll_200t_100pct_tla0_20260815_152108.csv
+
+[exited with code 0]

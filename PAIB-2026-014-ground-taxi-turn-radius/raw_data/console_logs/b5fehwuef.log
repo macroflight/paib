@@ -1,0 +1,29 @@
+15:27:55  Ready. lat=12.192129 lon=-68.975216 heading=125.2
+15:27:55  Setting weight: gross=380.0t, target fuel=130.0t (stepped fill)
+15:28:16  -> mains achieved: 92242 kg ([13621, 32500, 32500, 13621])
+15:28:39  -> center achieved: 37758 kg (target was 37758 kg)
+15:28:39  -> TrueZfw=551155 (250.0t), actual gross=380.0t
+15:28:40  Releasing parking brake: Brakes=1000;1000 -> 0;0
+15:28:42  Applying tiller = 999 (100.0%), breakaway tla=800.0
+15:28:46  Breakaway achieved at 0.47 kt (4.7s), reducing to idle
+15:29:38  Stopping: 360.7 deg turned in 51.2s, 252 samples
+15:29:38  Returning tiller to center
+15:29:38  Pilot mode: braking smoothly to a stop
+15:29:41  Stopped (0.13 kt)
+15:29:44  Setting parking brake: Brakes=1000;1000 -> Qh397=1 -> 0;0
+15:29:46  ======================================================================
+15:29:46  RESULT weight=380.0t tiller=100.0% tla=800.0
+15:29:46    262 valid (speed, radius, turn-rate) samples
+15:29:46    ~ 0 kt: radius median= 17.24 m (  56.6 ft)  turn_rate= 0.73 deg/s  n=2 min=17.19 max=17.29
+15:29:46    ~ 1 kt: radius median= 16.74 m (  54.9 ft)  turn_rate= 2.01 deg/s  n=31 min=16.74 max=17.11
+15:29:46    ~ 2 kt: radius median= 16.74 m (  54.9 ft)  turn_rate= 3.49 deg/s  n=39 min=16.73 max=102.87
+15:29:46    ~ 3 kt: radius median= 16.73 m (  54.9 ft)  turn_rate= 5.20 deg/s  n=38 min=16.73 max=89.95
+15:29:46    ~ 4 kt: radius median= 16.73 m (  54.9 ft)  turn_rate= 7.03 deg/s  n=32 min=16.73 max=67.04
+15:29:46    ~ 5 kt: radius median= 16.73 m (  54.9 ft)  turn_rate= 8.75 deg/s  n=32 min=16.73 max=57.80
+15:29:46    ~ 6 kt: radius median= 16.72 m (  54.9 ft)  turn_rate=10.96 deg/s  n=84 min=16.72 max=43.03
+15:29:46    ~ 7 kt: radius median= 18.90 m (  62.0 ft)  turn_rate=10.21 deg/s  n=4 min=17.33 max=21.67
+15:29:46    Sanity check @5kt: 16.73 m (reference ballpark: 23-25 m)
+15:29:46  ======================================================================
+15:29:46  Log written: /tmp/claude-1000/-home-kronberg-psxhacks/a46b2231-3315-403e-9129-33c916b96cba/scratchpad/roll_380t_100pct_tla800_20260815_152753.csv
+
+[exited with code 0]

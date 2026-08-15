@@ -3,6 +3,10 @@
 Archive for the PSX 747-400 ground taxi turn radius investigation, prepared
 in response to PSX Forum reports of an "unrealistically large" turn radius.
 
+**Status: resolved.** PSX update 10.190 (released after initial publication)
+addresses the investigation's findings; see report Section 7 (addendum,
+15 August 2026) and the "Post-fix verification" note below.
+
 ## Contents
 
 - `PAIB-2026-014-ground-taxi-turn-radius-report.pdf` — the final report.
@@ -22,6 +26,23 @@ in response to PSX Forum reports of an "unrealistically large" turn radius.
 - `raw_data/console_logs/` — full console output per run, including the
   per-speed-band radius/turn-rate summary the report's tables were built
   from.
+- `evidence/ESSA-rw26-start.png`, `evidence/ESSA-rw26-stop.png` — the two
+  screenshots behind report Section 3.7, the investigation's original
+  single most significant finding (pre-fix). A manually-flown 180° turn at
+  ESSA runway 26, using the exact documented minimum-radius technique
+  (Ref. 3) with body gear steering confirmed operative, starting with the
+  right outer main gear on the runway edge line. The MSFS ruler tool
+  measured 61.0 m between the gear's start and end position, giving a
+  measured outer main gear radius of 30.5 m — 64% larger than the 18.6 m
+  Boeing publishes for that gear (a gear body gear steering does not
+  affect either way).
+- `evidence/ESSA-rw26-190-start.png`, `evidence/ESSA-rw26-190-stop.png` —
+  the same test repeated after PSX update 10.190 (report Section 7). The
+  ruler measured 45.77 m outer-gear displacement (a second independent run
+  measured 47 m) — an essentially direct match for Boeing's own published
+  46.3 m minimum-runway-width figure, and a dramatically different visual
+  outcome: the aircraft stays on paved surface throughout, rather than
+  ending up on the grass.
 - `references/boeing_D6-58326-1_RevF_747-400_airport_planning.pdf` —
   Boeing's publicly-published *747-400 Airplane Characteristics for
   Airport Planning* (Document D6-58326-1, Rev F, Dec 2024), downloaded
@@ -94,33 +115,54 @@ sanity re-check), all such runs are included — they agree with each other
 to within measurement noise, which is itself part of the report's finding
 that host/visual configuration has no effect.
 
-The three most recent runs (`roll_200t_100pct_tla0_20260814_1050*.csv`,
-`roll_200t_50pct_tla0_20260814_1053*.csv`, and
-`roll_380t_100pct_tla800_20260814_1058*.csv`, all on `--port 10747`) were
-taken with body gear steering directly disabled (AC + DC "BODY GR STRNG
-ARM" circuit breakers pulled in the cockpit) — this is report Section 3.6,
-the investigation's headline finding. Everything else in the archive is
-with body gear steering in its normal, operative state.
+The runs timestamped `20260814_1050*`, `20260814_1053*`, and
+`20260814_1058*` (`roll_200t_100pct_tla0`, `roll_200t_50pct_tla0`, and
+`roll_380t_100pct_tla800` respectively, all on `--port 10747`) were taken
+with body gear steering directly disabled (AC + DC "BODY GR STRNG ARM"
+circuit breakers pulled in the cockpit) — this is report Section 3.6, the
+investigation's original headline finding. Everything else prior to the
+10.190 update is with body gear steering in its normal, operative state.
+
+The four runs timestamped `20260815_152*` (two `roll_200t_100pct_tla0`
+repeats, one `roll_200t_50pct_tla0`, one `roll_380t_100pct_tla800_...`)
+are the post-fix harness verification against **PSX 10.190**, report
+Section 7.1 — same bare PSX Main Server, same situ, same methodology as
+the original trials, run after the developer's fix. These are the only
+runs in the archive taken against the updated build; everything else
+reflects the original (pre-10.190) behaviour.
 
 ## Summary of findings
 
-See the report. Headline finding: disabling body gear steering increases
+**Resolution (Section 7, added 15 August 2026):** PSX update 10.190
+addresses this investigation's findings. Re-verified via the same visual
+technique at ESSA runway 26, the outer main gear's measured turn diameter
+dropped from 61.0 m (original) to 45.77 m / 47 m (10.190, two independent
+runs) — an essentially direct match for Boeing's own published 46.3 m
+minimum-runway-width figure. Separately, the harness's own reference-point
+measurement dropped from 25.10 m to 16.73–16.74 m (consistent across
+weight, tiller, and repeat runs), in the same direction and rough
+magnitude as the developer's own stated 14 m figure. The Board considers
+the investigation's findings resolved.
+
+**Original findings (pre-fix):** disabling body gear steering increased
 turn radius by 24–40% (weight-independent), closely matching both a forum
 poster's own description ("like the body gear is not steering") and this
 investigation's separately-measured high-speed (body-gear-deactivated)
-condition — but the magnitude is 4–5x larger, proportionally, than the
-manufacturer's own published inoperative-vs-operative comparison, which
-may itself warrant engineering attention.
+condition — but the magnitude was 4–5x larger, proportionally, than the
+manufacturer's own published inoperative-vs-operative comparison. The
+investigation's single most significant finding was a direct visual
+measurement (Section 3.7) showing the outer main gear itself tracking 64%
+wider than published, with body gear steering confirmed operative — a
+discrepancy independent of body gear steering state, since that gear isn't
+affected by it either way.
 
-With body gear steering operative, turn radius otherwise matches
-real-world reference data at every gross weight (200–380t) and host
-configuration tested — including a direct comparison against Boeing's own
-published clearance-radii table, where the measured 25.10 m falls right
-between the manufacturer's main-gear (18.6 m) and nose-gear (27.7 m) radii
-at maximum steering; is unaffected by `Qi275`/`TowTurnRadius`; and opens
-up sharply above ~18kt in a way that is weight-independent and consistent
-with known real-aircraft nosewheel/body-gear-steering speed limits.
+With body gear steering operative, the harness's own reference-point
+turn radius otherwise matched real-world reference data at every gross
+weight (200–380t) and host configuration tested; was unaffected by
+`Qi275`/`TowTurnRadius`; and opened up sharply above ~18kt in a way that
+was weight-independent and consistent with known real-aircraft
+nosewheel/body-gear-steering speed limits.
 
-The report's References section (Section 7) is explicit about what was
+The report's References section (Section 8) is explicit about what was
 independently verified, what came from a real-aircraft manual, and what
 was considered but rejected for lacking a traceable source.

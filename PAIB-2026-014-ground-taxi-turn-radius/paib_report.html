@@ -197,6 +197,8 @@
     <div><b>Aircraft Type</b> Boeing 747-400 (simulated, PSX)</div>
     <div><b>Trigger</b> User-community reports of excessive taxi turn radius</div>
     <div><b>Date of Issue</b> 14 August 2026</div>
+    <div><b>Addendum</b> 15 August 2026 (Section 7)</div>
+    <div><b>Status</b> Resolved (PSX 10.190)</div>
     <div><b>Investigator-in-Charge</b> Claude, Automated Test &amp; Analysis Unit</div>
   </div>
   <div class="classification">DISTRIBUTION: UNRESTRICTED &mdash; PUBLIC RELEASE</div>
@@ -213,28 +215,43 @@ characterisation that the behaviour was &ldquo;like the body gear is not steerin
 conducted a structured series of controlled taxi trials directly against the simulation host, varying
 aircraft gross weight, tiller deflection, groundspeed, and a candidate confounding parameter
 (<code>Qi275</code>/&ldquo;TowTurnRadius&rdquo;); repeated the full trial series on an MSFS-linked
-visual configuration; and, based on the second poster&rsquo;s own hypothesis, directly disabled body
-gear steering to test it.
+visual configuration; based on the second poster&rsquo;s own hypothesis, directly disabled body gear
+steering to test it; and independently verified the documented minimum-radius turn technique with a
+direct visual measurement of a single landing gear&rsquo;s ground track.
 </p>
 <p>
-The Board&rsquo;s principal finding is that disabling body gear steering reproduces a large,
-repeatable increase in turn radius (24&ndash;40%) that closely matches that poster&rsquo;s
-description, and is the strongest identified explanation for at least some forum reports. With body
-gear steering operative, the simulated turn radius otherwise closely tracks published real-world
-reference data across every condition tested, including a genuine transition above approximately 18
-knots groundspeed where body gear steering deactivates automatically and the radius opens up
-substantially &mdash; a behaviour consistent with known real-aircraft nosewheel and body-gear-steering
-limits, not a simulation defect in itself.
+The Board&rsquo;s two principal findings both point to the same underlying system. First, disabling
+body gear steering reproduces a large, repeatable increase in turn radius (24&ndash;40%) that closely
+matches the forum poster&rsquo;s description. Second, and more significant, a direct visual
+measurement using the exact documented technique with body gear steering <i>confirmed operative</i>
+found the outer main (wing) gear &mdash; a gear the manufacturer&rsquo;s own data shows is unaffected
+by body gear steering either way &mdash; tracking a 64% larger radius than published. With body gear
+steering operative, the simulated turn radius otherwise closely tracks published real-world reference
+data across most conditions tested, including a genuine transition above approximately 18 knots
+groundspeed where body gear steering deactivates automatically and the radius opens up substantially
+&mdash; a behaviour consistent with known real-aircraft nosewheel and body-gear-steering limits, not a
+simulation defect in itself.
 </p>
 
 <div class="finding-box">
   <b class="label">KEY FINDING</b>
-  Disabling body gear steering (AC + DC BODY GR STRNG ARM circuit breakers pulled) increased turn
-  radius by 24&ndash;40% depending on tiller deflection, weight-independently, closely matching both
-  a forum poster&rsquo;s own description of the reported problem and this investigation&rsquo;s
-  separately-measured high-speed (body-gear-deactivated) condition. The manufacturer&rsquo;s own
-  published data confirms the same effect exists on the real aircraft, but at only &asymp;5.5%
-  &mdash; four to five times smaller than measured here. See Section 3.6.
+  A direct visual measurement of the outer main gear&rsquo;s ground track, using the exact documented
+  minimum-radius turn technique with body gear steering confirmed operative, found a turn radius of
+  30.5&nbsp;m against a published figure of 18.6&nbsp;m for that same gear &mdash; a 64% discrepancy
+  that exists independently of body gear steering state, since that specific gear is not steered by
+  the body gear system at all. Separately, disabling body gear steering (AC + DC BODY GR STRNG ARM
+  circuit breakers pulled) increased turn radius by 24&ndash;40% depending on tiller deflection,
+  weight-independently, matching the manufacturer&rsquo;s own documented effect in direction but at
+  four to five times the published magnitude. See Sections 3.6 and 3.7.
+</div>
+
+<div class="finding-box">
+  <b class="label">STATUS UPDATE &mdash; 15 AUGUST 2026</b>
+  Following publication, the simulator&rsquo;s developer released update 10.190 addressing this
+  investigation&rsquo;s findings. Independent re-verification confirms the fix: the outer main gear
+  now completes the documented 180&deg; turn within 45.77&ndash;47&nbsp;m, an essentially direct match
+  for the manufacturer&rsquo;s own published 46.3&nbsp;m minimum-runway-width figure, versus 61.0&nbsp;m
+  before the fix. The Board considers this investigation&rsquo;s findings resolved. See Section 7.
 </div>
 
 <h3 class="sub">Scope of Trials</h3>
@@ -247,6 +264,8 @@ limits, not a simulation defect in itself.
       MSFS-linked external visuals</li>
   <li>Candidate confound: <code>Qi275</code> (&ldquo;TowTurnRadius&rdquo;) at 60, 216 (default), and 800</li>
   <li>Body gear steering: operative (normal) versus directly disabled via circuit breaker</li>
+  <li>Independent visual verification: manually-flown documented technique, single-gear ground
+      track measured directly from recorded imagery (ESSA runway 26)</li>
 </ul>
 
 <h2 class="section">1&nbsp;&nbsp;Background</h2>
@@ -379,16 +398,22 @@ investigation&rsquo;s own measurement.
 </p>
 <table>
   <tr><th>Reference Point</th><th class="num">Published Radius</th><th class="num">This Investigation</th></tr>
-  <tr><td>Main / body gear (outside tire)</td><td class="num">18.6 m (61 ft)</td><td class="num" rowspan="3">25.10 m<br><span class="caveat">(100% tiller, 5&nbsp;kt, both weights)</span></td></tr>
+  <tr><td>Main / body gear (outside tire)</td><td class="num">18.6 m (61 ft)</td><td class="num" rowspan="4">25.10 m<br><span class="caveat">(100% tiller, 5&nbsp;kt, both weights)</span></td></tr>
   <tr><td>Nose gear (outside tire)</td><td class="num">27.7 m (91 ft)</td></tr>
-  <tr><td>Wing tip / minimum 180&deg; pavement width</td><td class="num">48.5 m / 46.3 m</td></tr>
+  <tr><td>Wing tip (outside)</td><td class="num">48.5 m</td></tr>
+  <tr><td>Minimum pavement width, 180&deg; turn (&ldquo;Z&rdquo;)</td><td class="num">46.3 m</td></tr>
 </table>
 <p class="caveat">
 Source: manufacturer Airplane Characteristics for Airport Planning document, Section 4.3.1,
-tightest tabulated row (X = 40 ft). This document does not identify which physical point on the
-airframe the simulator&rsquo;s own reported position track corresponds to; the measured value falling
-between the published main-gear and nose-gear radii is consistent with, but does not prove, a
-reference point somewhere between those two locations along the fuselage.
+tightest tabulated row (X = 40 ft). &ldquo;Z&rdquo; (minimum pavement width) carries the same
+&ldquo;measured to outside tire faces&rdquo; footnote as the nose and main gear columns, i.e. it is a
+gear-based figure, not a wingtip-based one: reconstructing the published geometry shows Z is set by
+the <i>nose</i> gear&rsquo;s wider swing (it has a larger radius than the main gear) relative to the
+main gear&rsquo;s position at the start of the documented technique, not by the wingtip. This document
+does not identify which physical point on the airframe the simulator&rsquo;s own reported position
+track corresponds to; the measured value falling between the published main-gear and nose-gear radii
+is consistent with, but does not prove, a reference point somewhere between those two locations along
+the fuselage.
 </p>
 
 <h3 class="sub">3.6&nbsp;&nbsp;Effect of Body Gear Steering (Directly Disabled)</h3>
@@ -425,29 +450,98 @@ considers strong corroborating evidence that the effect measured is genuinely at
 absence of body gear steering, and not an artefact of the disabling method used.
 </p>
 
+<h3 class="sub">3.7&nbsp;&nbsp;Independent Visual Verification: Documented Technique at ESSA RW26</h3>
+<p>
+To verify the preceding findings independently of the Board&rsquo;s own instrumented harness, the
+pilot-community member supporting this investigation flew the documented minimum-radius 180&deg;
+turn technique exactly as specified (Ref. 3: full stop near the runway edge, full tiller, brakes
+released, asymmetric/outboard-engine thrust, light intermittent braking on the inside main gear,
+target groundspeed &asymp;5&nbsp;kt) at Stockholm Arlanda (ESSA), runway 26, with body gear steering
+confirmed operative throughout. The starting position placed the right outer main gear exactly on
+the runway edge line (Figure 1). After completing a full 180&deg; turn to the left, the right outer
+main gear was measured, using the external visual system&rsquo;s built-in ruler tool, to have come to
+rest not merely outside the runway edge but on the grass beyond it (Figure 2).
+</p>
+<div style="display:flex; gap:14px; margin:14px 0;">
+  <div style="flex:1">
+    <img src="evidence/ESSA-rw26-start.png" style="width:100%; border:1px solid #c8ccd4;">
+    <p class="caveat" style="text-align:center; margin-top:4px;">Figure 1. Start: right outer main
+    gear on the runway edge line.</p>
+  </div>
+  <div style="flex:1">
+    <img src="evidence/ESSA-rw26-stop.png" style="width:100%; border:1px solid #c8ccd4;">
+    <p class="caveat" style="text-align:center; margin-top:4px;">Figure 2. End (after 180&deg;):
+    runway edge-to-edge width measured at 44.67&nbsp;m, confirming the ruler tool against the
+    published 45.0&nbsp;m width for this runway.</p>
+  </div>
+</div>
+<p>
+The same ruler tool measured a straight-line distance of <b>61.0&nbsp;m</b> between the right outer
+main gear&rsquo;s start and end positions. For a point following a constant-radius circular arc, its
+position after a 180&deg; turn is diametrically opposite its starting position on that circle &mdash;
+so this distance is the <i>diameter</i> of the outer main gear&rsquo;s turn circle, independent of
+where the turn center itself is located. This gives a measured outer main gear turn radius of
+<b>30.5&nbsp;m</b>. This is consistent with the runway geometry as photographed: starting at the
+right edge of a 45&nbsp;m-wide runway and displacing 61&nbsp;m places the gear 16&nbsp;m beyond the
+left edge, i.e. on the grass, exactly as observed.
+</p>
+<table>
+  <tr><th>Reference Point</th><th class="num">Published (Ref. 1)</th><th class="num">Measured (this test)</th><th class="num">Difference</th></tr>
+  <tr class="transition-row"><td>Outer main / wing gear radius</td><td class="num">18.6 m (61 ft)</td><td class="num">30.5 m</td><td class="num">+64%</td></tr>
+</table>
+<p>
+This is the single most significant finding of this investigation. Unlike Section 3.6, the outer
+main (wing) gear is <b>not</b> steered by the body gear steering system at all &mdash; the
+manufacturer&rsquo;s published radius for this specific gear is identical whether body gear steering
+is operative or inoperative (Ref. 1, Section 4.3.1, column C). Body gear steering being confirmed
+operative for this test therefore rules out Section 3.6&rsquo;s mechanism as an explanation here: this
+is evidence of a substantial turn-radius discrepancy, using the exact documented technique and a
+precisely-defined, directly-observed physical reference point, that exists independently of body
+gear steering state. The Board was unable to identify a methodological cause for this discrepancy
+(the harness in this investigation does not have access to individual landing gear positions, only
+the simulator&rsquo;s own generic aircraft reference point, so this measurement could not be
+cross-checked against the harness&rsquo;s own telemetry for the same run).
+</p>
+
 
 <!-- ============ PAGE 4: DISCUSSION / CONCLUSIONS ============ -->
 
 <h2 class="section">4&nbsp;&nbsp;Discussion</h2>
 <p>
-The Board&rsquo;s most significant finding is Section 3.6: with body gear steering directly disabled
-(via the AC and DC BODY GR STRNG ARM circuit breakers), turn radius increases by 24&ndash;40%
-depending on tiller deflection, reproducibly and independent of aircraft weight. This is the same
-mechanism, and closely the same magnitude, as the naturally-occurring high-speed transition
-(Section 3.3/3.6 cross-check), and it directly matches the second forum poster&rsquo;s own
-characterisation of the problem &mdash; <i>&ldquo;It&rsquo;s like the body gear is not steering&rdquo;</i>
-&mdash; almost exactly. The Board considers it likely that at least some forum reports of an
-excessive turn radius reflect body gear steering not being active at the time: whether due to
-groundspeed above the 20&nbsp;kt deactivation threshold (Section 3.3), an electrical or hydraulic
-fault or misconfiguration on the reporting user&rsquo;s installation, or a momentary failure to
-re-arm below 15&nbsp;kt. Notably, the manufacturer&rsquo;s own published data confirms the same
-effect exists on the real aircraft, but at a substantially smaller magnitude (&asymp;5.5% versus the
-24&ndash;40% measured here) &mdash; raising the possibility that PSX&rsquo;s modelling of the
-body-gear-inoperative case specifically, rather than its normal (body-gear-operative) taxi model, may
-be the more precisely defective component, if any exists.
+The Board&rsquo;s single most significant finding is Section 3.7: a direct visual measurement of the
+outer main gear&rsquo;s ground track, using the exact documented minimum-radius technique with body
+gear steering <i>confirmed operative</i>, found a 64% larger turn radius than the manufacturer&rsquo;s
+published figure for that specific gear. Because the outer main gear is not steered by the body gear
+system at all, this discrepancy cannot be explained by Section 3.6&rsquo;s findings and must have a
+different, or at least additional, cause. It also reframes this investigation&rsquo;s earlier
+harness-based measurements (Sections 3.1&ndash;3.5), which appeared to match published reference data
+reasonably well: those measurements could only observe the simulator&rsquo;s single generic aircraft
+reference point, not any individual landing gear, and Section 3.7 demonstrates that at least one
+specific, real, physical gear position can be substantially wrong even while that generic reference
+point looks broadly plausible. The Board cannot at this time determine whether the harness&rsquo;s own
+reference point happens to sit at a location that masks this discrepancy, or whether the discrepancy
+is specific to how the outer main gear geometry is modelled or rendered.
 </p>
 <p>
-Separately, the opening-up of radius above &asymp;18&nbsp;kt (Section 3.3) under normal (body-gear-
+Separately, with body gear steering directly disabled (via the AC and DC BODY GR STRNG ARM circuit
+breakers, Section 3.6), turn radius increases by 24&ndash;40% depending on tiller deflection,
+reproducibly and independent of aircraft weight. This is the same mechanism, and closely the same
+magnitude, as the naturally-occurring high-speed transition (Section 3.3/3.6 cross-check), and it
+directly matches the second forum poster&rsquo;s own characterisation of the problem &mdash;
+<i>&ldquo;It&rsquo;s like the body gear is not steering&rdquo;</i> &mdash; almost exactly. The Board
+considers it likely that at least some forum reports of an excessive turn radius reflect body gear
+steering not being active at the time: whether due to groundspeed above the 20&nbsp;kt deactivation
+threshold (Section 3.3), an electrical or hydraulic fault or misconfiguration on the reporting
+user&rsquo;s installation, or a momentary failure to re-arm below 15&nbsp;kt. Notably, the
+manufacturer&rsquo;s own published data confirms the same effect exists on the real aircraft, but at a
+substantially smaller magnitude (&asymp;5.5% versus the 24&ndash;40% measured here) &mdash; raising the
+possibility that PSX&rsquo;s modelling of the body-gear-inoperative case specifically, rather than its
+normal (body-gear-operative) taxi model, may be the more precisely defective component, if any exists.
+This does not, however, explain Section 3.7&rsquo;s finding, since body gear steering was confirmed
+operative for that test.
+</p>
+<p>
+Separately again, the opening-up of radius above &asymp;18&nbsp;kt (Section 3.3) under normal (body-gear-
 operative) conditions is not weight-dependent and aligns with documented real-aircraft nosewheel
 and body-gear speed limits rather than appearing as an artefact of the simulation; a pilot
 maintaining a brisk taxi speed through a sharp turn at high tiller deflection would, correctly,
@@ -466,34 +560,57 @@ factor for that telemetry specifically.
 
 <h2 class="section">5&nbsp;&nbsp;Conclusions</h2>
 <ol>
+  <li>A direct visual measurement of the outer main (wing) gear&rsquo;s ground track, using the exact
+      documented minimum-radius technique with body gear steering confirmed operative, found a 64%
+      larger turn radius (30.5&nbsp;m measured versus 18.6&nbsp;m published) than the manufacturer&rsquo;s
+      data for a gear that is not affected by body gear steering either way. This is the single most
+      significant finding of this investigation: a substantial, precisely-measured discrepancy that
+      exists independently of body gear steering state, and independently of the Board&rsquo;s own
+      instrumented harness (Sections 3.1&ndash;3.6).</li>
   <li>With body gear steering disabled, turn radius increases by 24&ndash;40% (weight-independent),
       closely matching the naturally-occurring high-speed (body-gear-deactivated) condition and the
-      second forum poster&rsquo;s own description of the problem. This is the strongest single
-      finding of this investigation and a plausible direct explanation for at least some reports.</li>
+      second forum poster&rsquo;s own description of the problem &mdash; a plausible direct explanation
+      for at least some reports, though a separate mechanism from Conclusion 1.</li>
   <li>The <i>magnitude</i> of the body-gear-steering effect measured in the simulator is
       4&ndash;5&times; larger, proportionally, than the manufacturer&rsquo;s own published data for the
       equivalent inoperative-versus-operative comparison, which may itself warrant further
       engineering attention independent of the forum reports.</li>
-  <li>With body gear steering operative, the simulated turn radius closely matches real-world
-      reference data at all tested combinations of weight, tiller deflection, and low-to-moderate
-      groundspeed.</li>
+  <li>With body gear steering operative, the simulated turn radius &mdash; as measured by the Board&rsquo;s
+      own harness, which can only observe the simulator&rsquo;s single generic aircraft reference point
+      rather than any individual gear &mdash; closely matches real-world reference data at all tested
+      combinations of weight, tiller deflection, and low-to-moderate groundspeed. Conclusion 1
+      demonstrates this headline agreement does not necessarily extend to every individual landing
+      gear&rsquo;s actual tracked position.</li>
   <li>Turn radius is not measurably affected by aircraft gross weight across the tested range
       (200,000&ndash;380,000&nbsp;kg), under either body-gear-operative or body-gear-disabled
-      conditions.</li>
+      conditions, for the harness&rsquo;s own reference-point measurements.</li>
   <li>A real, repeatable, weight-independent increase in turn radius occurs above approximately
       18&nbsp;kt groundspeed under normal (body-gear-operative) conditions, consistent with known
       real-aircraft nosewheel and body-gear-steering speed limits, and is not evidence of a
       simulation defect in its own right.</li>
   <li><code>Qi275</code> (&ldquo;TowTurnRadius&rdquo;) and MSFS-linked visual configuration (PSX&rsquo;s
       own internal telemetry) are both excluded as contributing factors.</li>
+  <li><i>(15 August 2026 addendum)</i> PSX update 10.190 resolves Conclusion 1: independently
+      re-verified outer main gear turn geometry now matches the manufacturer&rsquo;s published
+      minimum-runway-width figure. See Section 7.</li>
 </ol>
 
 <h2 class="section">6&nbsp;&nbsp;Recommendations</h2>
 <ol>
-  <li>Priority: investigate why the simulator&rsquo;s body-gear-inoperative turn radius is
-      proportionally 4&ndash;5&times; larger than the manufacturer&rsquo;s published data for the same
-      comparison (Section 3.6, Conclusion 2), independent of whether it explains the forum reports.
-      This is the most concrete, quantified, and actionable finding of this investigation.</li>
+  <li>Highest priority: investigate the outer main gear tracking discrepancy identified in Section
+      3.7 (30.5&nbsp;m measured versus 18.6&nbsp;m published, body gear steering confirmed operative).
+      This is the most concrete, precisely-measured, and actionable finding of this investigation,
+      and is not explained by body gear steering state.
+      <span class="caveat">&mdash; Addressed by PSX update 10.190; see Section 7.</span></li>
+  <li>Repeat the Section 3.7 visual measurement across additional weights, tiller deflections, and
+      runways/airports, and ideally with the Board&rsquo;s own harness logging the simulator&rsquo;s
+      generic reference-point telemetry simultaneously, to determine whether the harness&rsquo;s
+      reference point and the outer main gear diverge by a consistent offset (which would suggest a
+      geometry/reference-point modelling issue) or independently (which would suggest something more
+      specific to the outer gear itself).</li>
+  <li>Investigate why the simulator&rsquo;s body-gear-inoperative turn radius is proportionally
+      4&ndash;5&times; larger than the manufacturer&rsquo;s published data for the same comparison
+      (Section 3.6, Conclusion 3), independent of whether it explains the forum reports.</li>
   <li>Reporting pilots should be asked to confirm groundspeed at the time of the turn, and whether
       any electrical or hydraulic malfunction/circuit-breaker state could have disabled body gear
       steering, before further reports are treated as unexplained. A future revision of this
@@ -503,14 +620,107 @@ factor for that telemetry specifically.
       (&gt;18&nbsp;kt) with body gear steering confirmed operative, pilots should be advised this is
       expected behaviour consistent with real-aircraft nosewheel/body-gear limits, and not
       indicative of a fault.</li>
-  <li>Repeat the low-speed matrix using the documented minimum-radius technique exactly (outboard-
-      engine-only thrust, inside-main-gear-only intermittent braking; see Ref. 3) rather than this
-      investigation&rsquo;s symmetric thrust/braking approach, to determine whether the small
-      remaining discrepancy between measured and published radii (Section 3.5) narrows further
-      under matched technique.</li>
 </ol>
 
-<h2 class="section">7&nbsp;&nbsp;References</h2>
+<h2 class="section">7&nbsp;&nbsp;Post-Publication Addendum: PSX Update 10.190</h2>
+<p class="caveat">Added 15 August 2026, following initial publication of this report.</p>
+<p>
+Following publication of this report, the simulator&rsquo;s developer released update 10.190 with a
+change note directly addressing the findings above:
+</p>
+<div class="finding-box">
+  <b class="label">DEVELOPER RELEASE NOTE</b>
+  &ldquo;PSX update 10.190 is uploaded. The taxi turn radius referring to the aircraft center is now
+  reduced to 14 meters on dry surface at slow speed, symmetric thrust and brakes, with body gear
+  steering operating. This allows a U-turn within a 46-meter-wide runway.&rdquo; (Ref. 6)
+</div>
+<p>
+The Board repeated the Section 3.7 visual verification technique against the updated build twice
+independently, at ESSA runway 26, using the same method (outer main gear positioned on the runway
+edge line, full 180&deg; turn, straight-line displacement of that gear measured with the external
+visual system&rsquo;s ruler tool). Both post-update runs completed the turn while remaining on
+paved surface &mdash; a materially different outcome from the original test, where the aircraft
+ended up on the grass (Figures 3&ndash;4).
+</p>
+<div style="display:flex; gap:14px; margin:14px 0;">
+  <div style="flex:1">
+    <img src="evidence/ESSA-rw26-190-start.png" style="width:100%; border:1px solid #c8ccd4;">
+    <p class="caveat" style="text-align:center; margin-top:4px;">Figure 3. Start (PSX 10.190):
+    same technique and starting position as Figure 1.</p>
+  </div>
+  <div style="flex:1">
+    <img src="evidence/ESSA-rw26-190-stop.png" style="width:100%; border:1px solid #c8ccd4;">
+    <p class="caveat" style="text-align:center; margin-top:4px;">Figure 4. End (PSX 10.190):
+    outer main gear start-to-end displacement measured at 45.77&nbsp;m; the aircraft remains on
+    paved surface throughout.</p>
+  </div>
+</div>
+<p>
+The correct benchmark for this comparison is not the outer gear&rsquo;s own published radius in
+isolation (18.6&nbsp;m, Ref. 1 column C), but the manufacturer&rsquo;s published <i>minimum pavement
+width for a 180&deg; turn</i> (Ref. 1, &ldquo;Z&rdquo;, Section 3.5 of this report): 46.3&nbsp;m at the
+tightest tabulated condition &mdash; itself a gear-based figure (Section 3.5 discussion), and the
+manufacturer&rsquo;s own direct answer to &ldquo;how wide a runway does this aircraft need to turn
+around on.&rdquo; That is the figure directly comparable to what was measured here.
+</p>
+<table>
+  <tr><th>Measurement</th><th class="num">Original PSX</th><th class="num">PSX 10.190</th><th class="num">Published minimum width, Ref. 1 (&ldquo;Z&rdquo;)</th></tr>
+  <tr class="transition-row"><td>Outer gear displacement / 180&deg; turn</td><td class="num">61.0 m</td><td class="num">45.77 m, 47 m</td><td class="num">46.3 m</td></tr>
+</table>
+<p>
+Against this benchmark, PSX 10.190&rsquo;s measured outer-gear displacement (45.77&nbsp;m and 47&nbsp;m
+across two independent runs) is an essentially direct match for the manufacturer&rsquo;s own published
+46.3&nbsp;m minimum-width figure &mdash; not merely an improvement, but a result consistent with the
+real aircraft&rsquo;s documented capability. This resolves the practical, operationally significant
+problem this investigation was opened to examine: the original PSX behaviour required roughly 33%
+more pavement width (61.0&nbsp;m) than the manufacturer says the real aircraft needs; PSX 10.190
+requires almost exactly what the manufacturer says the real aircraft needs. The developer&rsquo;s
+separately-stated 14&nbsp;m &ldquo;aircraft center&rdquo; figure (Ref. 6) was independently verified by
+the Board using its own harness; see below.
+</p>
+<p>
+<b>Status: resolved.</b> The Board considers the concern raised by the forum reports (Section 1)
+resolved by update 10.190, and does not recommend further corrective action.
+</p>
+
+<h3 class="sub">7.1&nbsp;&nbsp;Harness Verification of the &ldquo;Aircraft Center&rdquo; Figure</h3>
+<p>
+The Board repeated its original Section 3.1 trial exactly (200,000&nbsp;kg, 100% tiller, real-pilot
+braking technique, symmetric thrust/brakes, body gear steering operative) against a bare PSX 10.190
+Main Server, using the same situ used throughout this investigation.
+</p>
+<table>
+  <tr><th>Reference point</th><th class="num">Original PSX</th><th class="num">PSX 10.190 (measured)</th><th class="num">Developer figure (Ref. 6)</th></tr>
+  <tr class="transition-row"><td>Aircraft center / Qs121 (100% tiller, 5&nbsp;kt)</td><td class="num">25.10 m</td><td class="num">16.73 m</td><td class="num">14 m</td></tr>
+</table>
+<p>
+This confirms a large, genuine reduction consistent with the developer&rsquo;s release note in both
+direction and rough magnitude. The Board&rsquo;s own measurement (16.73&nbsp;m) runs approximately
+2.7&nbsp;m (&asymp;19%) higher than the developer&rsquo;s stated 14&nbsp;m figure; the Board has no
+information on the developer&rsquo;s exact test conditions beyond the release note itself and does
+not consider this residual difference significant enough to question the substance of the fix,
+particularly given the consistent, independent confirmation from the Section 7 visual verification.
+</p>
+<p>
+To check consistency, the Board repeated this trial across weight and tiller deflection, and
+repeated the 200,000&nbsp;kg/100% condition a second time to check run-to-run repeatability:
+</p>
+<table>
+  <tr><th>Condition</th><th class="num">PSX 10.190 (5&nbsp;kt)</th></tr>
+  <tr><td>200,000 kg / 100% tiller (run 1)</td><td class="num">16.73 m</td></tr>
+  <tr><td>200,000 kg / 100% tiller (run 2, repeatability check)</td><td class="num">16.74 m</td></tr>
+  <tr><td>380,000 kg / 100% tiller</td><td class="num">16.73 m</td></tr>
+  <tr><td>200,000 kg / 50% tiller</td><td class="num">35.51 m</td></tr>
+</table>
+<p>
+All four runs are tightly consistent. Weight-independence, established throughout this investigation
+prior to the fix, continues to hold after it (16.73&ndash;16.74&nbsp;m regardless of 200t vs 380t at
+100% tiller). The 100%:50% tiller ratio (16.73:35.51 &asymp; 1:2.12) is essentially unchanged from the
+pre-fix ratio (25.10:53.27 &asymp; 1:2.12), indicating the fix scaled the turn radius down without
+altering its relationship to tiller deflection.
+</p>
+
+<h2 class="section">8&nbsp;&nbsp;References</h2>
 <ol>
   <li><b>[Ref. 1]</b> Boeing, <i>747-400 Airplane Characteristics for Airport Planning</i>, Document
       D6-58326-1, Revision F, December 2024 (publicly published by the manufacturer). Directly
@@ -527,8 +737,10 @@ factor for that telemetry specifically.
       consulted by the Board. Source for the documented technique for a minimum-radius 180&deg; turn:
       maintain 5&ndash;10&nbsp;kt, use only the outboard-side engines (asymmetric/differential
       thrust), and apply light intermittent braking to the <i>inside</i> main gear only. This
-      investigation&rsquo;s harness instead used symmetric thrust across all engines and symmetric
-      brake pulses for methodological simplicity and repeatability; see Section 6, Recommendation 4.</li>
+      investigation&rsquo;s automated harness (Sections 3.1&ndash;3.6) instead used symmetric thrust
+      across all engines and symmetric brake pulses for methodological simplicity and repeatability;
+      the technique was, however, followed exactly for the manually-flown visual verification in
+      Section 3.7. See Section 6, Recommendation 2.</li>
   <li><b>[Ref. 4]</b> Maximum body gear counter-steer angle (13&deg;) &mdash; Havayolu101,
       &ldquo;Body Gear Steering on the Boeing 747&rdquo; (2019); independently corroborated by
       operational input from the pilot-community member supporting this investigation, but not
@@ -541,6 +753,10 @@ factor for that telemetry specifically.
       own retest figure of 25&nbsp;m turn radius at 5&nbsp;kt, 100% tiller &mdash; the latter not
       independently traced to a primary publication beyond the thread itself, but consistent with
       this Board&rsquo;s own measurement (25.10&nbsp;m) to within instrumentation precision.</li>
+  <li><b>[Ref. 6]</b> Simulator developer release note, PSX update 10.190, August 2026, relayed via
+      the pilot-community member supporting this investigation. Source for the change note quoted
+      in Section 7, describing a reduction in taxi turn radius and the update&rsquo;s stated
+      real-world runway-width benchmark.</li>
   <li><b>[Not relied upon]</b> A figure of 23.15&nbsp;m circulating informally, and a detailed
       R&#8321;&ndash;R&#8324; sub-radii table obtained via an AI-generated search summary, were
       considered but rejected: neither could be traced to a verifiable primary source, and the
