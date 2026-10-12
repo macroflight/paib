@@ -1,0 +1,550 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>PAIB Report 2026-015</title>
+<style>
+  @page { size: A4; margin: 22mm 18mm 20mm 18mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Georgia", "Times New Roman", serif;
+    color: #1a1f2b;
+    font-size: 10.8pt;
+    line-height: 1.5;
+    margin: 0;
+  }
+  .cover {
+    height: 253mm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    page-break-after: always;
+  }
+  .cover img.logo { width: 150px; height: 150px; margin-bottom: 18px; }
+  .cover .agency {
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #0d2340;
+    font-size: 13pt;
+  }
+  .cover .agency-sub {
+    font-family: "Arial", sans-serif;
+    font-size: 9pt;
+    color: #5a6472;
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+  .cover .divider {
+    width: 90px;
+    border-top: 2px solid #d9a441;
+    margin: 22px 0;
+  }
+  .cover h1 {
+    font-size: 21pt;
+    color: #0d2340;
+    margin: 0 0 6px 0;
+    max-width: 480px;
+  }
+  .cover h2 {
+    font-size: 12.5pt;
+    font-weight: 400;
+    color: #43506a;
+    margin: 0 0 26px 0;
+  }
+  .cover .metabox {
+    font-family: "Arial", sans-serif;
+    font-size: 9pt;
+    color: #333;
+    border: 1px solid #c8ccd4;
+    border-radius: 3px;
+    padding: 14px 26px;
+    text-align: left;
+    line-height: 1.9;
+  }
+  .cover .metabox b { color: #0d2340; display: inline-block; width: 140px; }
+  .cover .classification {
+    font-family: "Arial", sans-serif;
+    font-size: 8.3pt;
+    color: #9a3b3b;
+    letter-spacing: 1.5px;
+    margin-top: 30px;
+    border: 1px solid #9a3b3b;
+    padding: 3px 12px;
+    border-radius: 2px;
+  }
+  .cover .motto {
+    font-family: "Arial", sans-serif;
+    font-style: italic;
+    font-size: 8.5pt;
+    color: #8a94a3;
+    margin-top: 14px;
+  }
+
+  h2.section {
+    font-family: "Arial", sans-serif;
+    font-size: 13.5pt;
+    color: #0d2340;
+    border-bottom: 2px solid #d9a441;
+    padding-bottom: 4px;
+    margin: 26px 0 10px 0;
+  }
+  h3.sub {
+    font-family: "Arial", sans-serif;
+    font-size: 11pt;
+    color: #1c3d66;
+    margin: 16px 0 6px 0;
+  }
+  p { margin: 6px 0 10px 0; text-align: justify; }
+  ul, ol { margin: 6px 0 10px 22px; padding: 0; }
+  li { margin-bottom: 4px; }
+
+  .finding-box {
+    background: #f4f7fb;
+    border-left: 3px solid #1c3d66;
+    padding: 10px 14px;
+    margin: 12px 0;
+    font-size: 10.3pt;
+  }
+  .finding-box b.label {
+    font-family: "Arial", sans-serif;
+    font-size: 8pt;
+    letter-spacing: 1px;
+    color: #1c3d66;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9.3pt;
+    margin: 10px 0 16px 0;
+    font-family: "Arial", sans-serif;
+  }
+  th {
+    background: #0d2340;
+    color: #fff;
+    text-align: left;
+    padding: 6px 8px;
+    font-weight: 600;
+  }
+  td {
+    padding: 5px 8px;
+    border-bottom: 1px solid #e2e5ea;
+  }
+  tr:nth-child(even) td { background: #f7f9fb; }
+  td.num, th.num { text-align: right; }
+  .transition-row td { background: #fdf1e2 !important; font-weight: 600; }
+
+  .caveat {
+    font-size: 8.6pt;
+    color: #7b8494;
+    font-style: italic;
+  }
+
+  .signoff {
+    margin-top: 30px;
+    font-family: "Arial", sans-serif;
+    font-size: 9.5pt;
+  }
+  .signoff table { width: auto; border: none; }
+  .signoff td { border: none; padding: 3px 0; }
+  .sigline {
+    border-top: 1px solid #333;
+    width: 220px;
+    margin-top: 26px;
+    padding-top: 3px;
+    font-size: 8.3pt;
+    color: #555;
+  }
+
+  .footer-note {
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    font-size: 7.5pt;
+    color: #a3aab5;
+    margin-top: 30px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER PAGE ============ -->
+<div class="cover">
+  <img class="logo" src="file:///home/kronberg/PAIB-rubberband.png" alt="PAIB logo">
+  <div class="agency">PENGUIN ACCIDENT INVESTIGATION BOARD</div>
+  <div class="agency-sub">PENGUIN&rsquo;S DEMOCRATIC REPUBLIC OF PATAGONIA &nbsp;&bull;&nbsp; OFFICE OF FLIGHT OPERATIONS RESEARCH</div>
+  <div class="divider"></div>
+  <h1>Crosswind Landing Downwind Drift Rate Investigation</h1>
+  <h2>Boeing 747-400 &mdash; Autopilot-Disengaged Ground-Track Response to Ambient Crosswind</h2>
+  <div class="metabox">
+    <div><b>Report Number</b> PAIB/2026/015</div>
+    <div><b>Investigation Type</b> Technical Performance Review</div>
+    <div><b>Aircraft Type</b> Boeing 747-400 (simulated, PSX)</div>
+    <div><b>Trigger</b> Pilot report of unrealistically fast downwind drift during crosswind de-crab</div>
+    <div><b>Date of Issue</b> 15 August 2026</div>
+    <div><b>Status</b> Open &mdash; follow-up recommended (see Recommendations)</div>
+    <div><b>Investigator-in-Charge</b> Claude, Automated Test &amp; Analysis Unit</div>
+  </div>
+  <div class="classification">DISTRIBUTION: UNRESTRICTED &mdash; PUBLIC RELEASE</div>
+  <div class="motto">&ldquo;In Claude Confidimus&rdquo;</div>
+</div>
+
+<!-- ============ PAGE 2: SUMMARY ============ -->
+
+<h2 class="section">Executive Summary</h2>
+<p>
+This investigation was opened following a type-rated pilot&rsquo;s report that, during a crosswind
+landing, the aircraft &ldquo;seems to start drifting downwind much quicker than in real life (or FFS
+for that matter)&rdquo; once de-crabbing during the flare, making it difficult to fly the wings-level,
+de-crab-to-touchdown technique the pilot normally uses on the real aircraft and in a full-flight
+simulator. The Board built a passive, non-interfering monitoring harness &mdash; one that logs aircraft
+position, heading, bank, and ground-contact state at high rate but never writes any control input to
+the simulator &mdash; and used it to measure the aircraft&rsquo;s actual downwind ground-track drift
+rate across a matrix of pilot-commanded crosswind conditions (5, 10, 20, 30, and 40&nbsp;kt direct
+crosswind, a 30&nbsp;kt/45&deg; quartering crosswind, and a calm-wind control), with the pilot manually
+flying each approach on autopilot/ILS to a stabilized centerline track, then disconnecting the autopilot
+and releasing motion freeze to expose the aircraft to the commanded wind with no further corrective
+input of any kind.
+</p>
+<p>
+Across every condition tested, the aircraft&rsquo;s downwind ground-track drift rate converged to the
+commanded crosswind component to within approximately 2&ndash;4%, and did so quickly: within
+1.6&nbsp;seconds of motion release in the slowest case, and in several runs at or below the harness&rsquo;s
+own &asymp;0.2-second sampling resolution &mdash; i.e. no measurable ramp-up at all. The Board considers
+this consistent with ordinary wind-triangle physics for an aircraft with no active heading or bank
+correction, rather than evidence of a simulation defect in this specific (fully hands-off) configuration.
+However, this passive test methodology is not the same maneuver the reporting pilot described: it cannot
+by itself confirm or refute whether PSX responds correctly to <i>active</i> corrective control input
+during a real de-crab. That specific comparison is identified as necessary follow-up work and this
+investigation remains open pending it.
+</p>
+
+<div class="finding-box">
+  <b class="label">KEY FINDING</b>
+  With autopilot disengaged and no corrective control input applied at any point, the aircraft&rsquo;s
+  downwind drift rate reaches the full commanded crosswind component (5&ndash;40&nbsp;kt tested, plus a
+  45&deg; quartering case) within 1.6&nbsp;seconds of motion release in every run, and in several runs
+  within the harness&rsquo;s own sampling resolution. This is physically expected for a wings-level
+  aircraft with no correcting input, and does not by itself establish whether the pilot&rsquo;s reported
+  behaviour &mdash; occurring during an <i>active</i>, continuously-corrected de-crab &mdash; reflects a
+  genuine simulator discrepancy. See Section 4 and Recommendation 1.
+</div>
+
+<h3 class="sub">Scope of Trials</h3>
+<ul>
+  <li>Direct (90&deg;) crosswind magnitude: 5, 10, 20, 30 (three repeats), and 40&nbsp;kt</li>
+  <li>Quartering crosswind: 30&nbsp;kt at 45&deg; off the runway heading (headwind + crosswind component)</li>
+  <li>Calm-wind control run (0&nbsp;kt commanded) to establish the harness&rsquo;s own measurement noise
+      floor</li>
+  <li>All runs: EHAM runway 06, aircraft established on autopilot/ILS on the extended centerline prior
+      to release, motion freeze on until manually released by the pilot after autopilot disconnect</li>
+  <li>Wind-direction input convention (true vs. magnetic heading reference) empirically verified against
+      the aircraft&rsquo;s own IRS-driven navigation display wind indication</li>
+</ul>
+
+<h2 class="section">1&nbsp;&nbsp;Background</h2>
+<p>
+A type-rated pilot reported: <i>&ldquo;I find that during crosswind landing de-crabbing, the aircraft
+seems to start drifting downwind much quicker than in real life (or FFS for that matter), making it
+quite hard to do what I normally do in real life (de-crab during flare, wings level until touch down)
+under certain cross wind/runway conditions.&rdquo;</i> This describes a specific, active maneuver: crabbing
+into wind on final approach, then transitioning to a wings-level attitude during the flare while
+continuously applying small corrective inputs to hold the runway centerline, with the crosswind
+correction applied progressively rather than removed all at once.
+</p>
+<p>
+To make the underlying aircraft response directly measurable and repeatable, the Board and the
+reporting pilot agreed on a simplified, controlled first test: establish the aircraft on autopilot/ILS
+under calm wind conditions, aligned with the runway centerline, with motion freeze engaged; then apply
+a step change in wind, disconnect the autopilot, and release motion freeze &mdash; producing an aircraft
+that is, from that instant, wings-level, on runway heading, with no autopilot and no pilot control input
+of any kind, exposed to the full commanded crosswind. This isolates the aircraft&rsquo;s bare aerodynamic
+and inertial response to crosswind from any question of pilot or autopilot control-loop behaviour, and
+was explicitly understood by both parties as a starting point rather than a full reproduction of the
+pilot&rsquo;s actual complaint (see Section 4 and Recommendation 1).
+</p>
+
+<h2 class="section">2&nbsp;&nbsp;Methodology</h2>
+<p>
+The Board built a dedicated monitoring harness that connects to the simulation host over its native
+network protocol in a purely passive role: it subscribes to the aircraft&rsquo;s position/attitude
+telemetry, ground-contact state, height, and autopilot mode string, and logs every update at the
+host&rsquo;s native rate (&asymp;5&nbsp;Hz), but at no point sends any control input, weight change, wind
+change, or other write to the simulator. All test conditions (aircraft positioning, wind setting,
+autopilot disconnect, motion freeze release) were set up and executed manually by the reporting pilot;
+the Board&rsquo;s role was limited to instrumented observation.
+</p>
+<ol>
+  <li><b>Reference heading capture</b> &mdash; on connecting for each run, the harness waits until the
+      aircraft is airborne and holds a stable heading (re-arming this wait if the aircraft is found on
+      the ground, e.g. from a prior run&rsquo;s rollout not yet reset), then averages ten heading samples
+      using a circular mean to establish a reference (runway) heading. This is captured while the
+      aircraft is still under calm-wind autopilot/ILS control, tracking the centerline, so it does not
+      depend on knowing the runway&rsquo;s published heading or its magnetic variation.</li>
+  <li><b>Ground-track derivation</b> &mdash; instantaneous ground speed and track angle are computed from
+      consecutive latitude/longitude samples via a local flat-earth (east/north) projection, rejecting
+      sample pairs with negligible displacement (motion-freeze artefacts) or with a timing gap exceeding
+      1&nbsp;second.</li>
+  <li><b>Crosswind/along-track decomposition</b> &mdash; the ground velocity vector is resolved against
+      the reference heading into a crosswind component (perpendicular to the runway) and an along-track
+      component (parallel to it), which is the quantity of interest for downwind drift.</li>
+  <li><b>Touchdown detection and auto-stop</b> &mdash; the harness detects the ground-contact transition
+      and continues logging briefly afterward before stopping automatically, so each run captures the
+      full airborne exposure to the commanded wind plus the immediate post-touchdown transition.</li>
+  <li><b>Steady-state analysis</b> &mdash; per run, the point of motion release is identified from the
+      logged height first departing from its pre-release value; the crosswind component is then averaged
+      over all airborne samples from six seconds after that point to touchdown, excluding the initial
+      transient.</li>
+</ol>
+
+<h3 class="sub">2.1&nbsp;&nbsp;Wind-Direction Input Convention</h3>
+<p>
+No variable on the simulator&rsquo;s network protocol reports ambient wind directly, so the actual
+crosswind angle achieved cannot be read back independently of the aircraft&rsquo;s own inertial response
+&mdash; a limitation directly relevant to this section. The first trial run (Section 3, Run&nbsp;1)
+commanded a wind direction equal to the runway&rsquo;s displayed/AP-tracked heading plus 90&deg;, intending
+an exact direct crosswind. The resulting steady-state drift measured slightly but consistently below the
+commanded 30&nbsp;kt (29.3&nbsp;kt, Section 3.1), suggesting the commanded wind was not quite perpendicular
+to the runway. The reporting pilot subsequently identified a plausible cause: the wind-direction input may
+be referenced to true heading, while the aircraft&rsquo;s displayed/AP-tracked heading is magnetic. This
+investigation did not independently verify which convention the wind input itself uses, so no root cause is
+asserted; instead, the pilot verified the intended geometry directly and empirically, using the
+aircraft&rsquo;s own IRS-driven navigation display wind readout, and found that a commanded wind direction of
+150&deg; (rather than the runway heading&thinsp;+90&thinsp;&asymp;&thinsp;147.5&deg; that a same-convention
+assumption would suggest) produced an on-instrument reading of an almost exact 90&deg; crosswind. All
+subsequent 90&deg;-crosswind runs (Section 3, Runs&nbsp;2&ndash;9) used this pilot-verified 150&deg; wind
+direction; the 45&deg;-quartering run (Run&nbsp;10) used 105&deg;, the same offset applied consistently.
+This is flagged here as a practical methodology hazard for anyone setting up a similar test in PSX, not
+as a finding about the pilot&rsquo;s original complaint.
+</p>
+
+
+<!-- ============ PAGE 3+: FINDINGS ============ -->
+
+<h2 class="section">3&nbsp;&nbsp;Findings</h2>
+
+<h3 class="sub">3.1&nbsp;&nbsp;Steady-State Drift vs. Commanded Crosswind Magnitude</h3>
+<p>
+Nine runs were flown at direct (90&deg;) crosswind, spanning 5&ndash;40&nbsp;kt, plus one further run at
+30&nbsp;kt discarded for a methodological reason noted below. Steady-state crosswind drift is the mean of
+the crosswind component of ground track over all airborne samples from six seconds after motion release
+to touchdown.
+</p>
+<table>
+  <tr><th>Run</th><th>Commanded Crosswind</th><th class="num">Measured Steady-State Drift</th><th class="num">Std. Dev.</th><th class="num">Deviation</th></tr>
+  <tr><td>9</td><td>5 kt</td><td class="num">5.21 kt</td><td class="num">0.11 kt</td><td class="num">+4.1%</td></tr>
+  <tr><td>8</td><td>10 kt</td><td class="num">10.22 kt</td><td class="num">0.23 kt</td><td class="num">+2.2%</td></tr>
+  <tr><td>7</td><td>20 kt</td><td class="num">20.66 kt</td><td class="num">0.58 kt</td><td class="num">+3.3%</td></tr>
+  <tr><td>1</td><td>30 kt <span class="caveat">(uncorrected wind heading, Section 2.1)</span></td><td class="num">29.33 kt</td><td class="num">0.55 kt</td><td class="num">&minus;2.2%</td></tr>
+  <tr><td>2</td><td>30 kt</td><td class="num">30.69 kt</td><td class="num">0.93 kt</td><td class="num">+2.3%</td></tr>
+  <tr><td>3</td><td>30 kt</td><td class="num">30.11 kt</td><td class="num">0.83 kt</td><td class="num">+0.4%</td></tr>
+  <tr><td>5</td><td>30 kt</td><td class="num">30.76 kt</td><td class="num">0.72 kt</td><td class="num">+2.5%</td></tr>
+  <tr><td>6</td><td>40 kt</td><td class="num">40.70 kt</td><td class="num">0.89 kt</td><td class="num">+1.8%</td></tr>
+</table>
+<p class="caveat">
+Run&nbsp;4 (a fourth 30&nbsp;kt repeat) is excluded: the harness happened to start, and lock its reference
+heading, during ground rollout from the previous run before the aircraft had been repositioned for the
+next approach, producing an incorrect reference heading and an artificially inflated apparent drift figure
+in that run&rsquo;s raw log. The harness was corrected immediately afterward to wait for a stable airborne
+heading before capturing the reference, and the fault did not recur. The run&rsquo;s raw data is retained
+in the archive for transparency but is not used in this report&rsquo;s figures.
+</p>
+<p>
+Runs 2, 3, and 5 (three independent 30&nbsp;kt repeats under the pilot-verified wind heading, Section 2.1)
+average 30.52&nbsp;kt, a tight spread (30.11&ndash;30.76&nbsp;kt) consistent with run-to-run reproducibility
+rather than any systematic trend. Across the full magnitude sweep, measured drift runs consistently
+1.8&ndash;4.1% above the commanded value (Run&nbsp;1 being the exception, for the wind-heading reason
+already discussed). The Board considers this small, uniform, one-directional offset more likely
+attributable to residual imprecision in this investigation&rsquo;s own empirically-captured reference
+heading &mdash; itself subject to measurement noise of a similar order &mdash; than to a genuine simulator
+effect, and does not treat it as a finding in its own right.
+</p>
+
+<h3 class="sub">3.2&nbsp;&nbsp;45&deg; Quartering Crosswind</h3>
+<p>
+Run&nbsp;10 commanded a 30&nbsp;kt wind at 45&deg; off the runway heading (105&deg;, per the offset
+established in Section 2.1), combining a crosswind and a headwind component. Geometrically, 30&nbsp;kt at
+47.25&deg; off the reference heading (the wind bearing actually used, minus the measured reference heading)
+predicts a crosswind component of 30&times;sin(47.25&deg;)&nbsp;&asymp;&nbsp;22.0&nbsp;kt.
+</p>
+<table>
+  <tr><th>Run</th><th>Commanded</th><th>Predicted Crosswind Component</th><th class="num">Measured</th><th class="num">Deviation</th></tr>
+  <tr class="transition-row"><td>10</td><td>30 kt @ 45&deg;</td><td>22.03 kt</td><td class="num">22.82 kt</td><td class="num">+3.6%</td></tr>
+</table>
+<p>
+The measured value tracks the geometric prediction with the same small, uniform high bias observed
+throughout Section 3.1, and shows no sign of any additional effect specific to a quartering (as opposed to
+direct) crosswind.
+</p>
+
+<h3 class="sub">3.3&nbsp;&nbsp;Calm-Wind Control Run</h3>
+<p>
+Run&nbsp;11 repeated the identical procedure (autopilot disconnect, motion freeze release) with no wind
+commanded, to establish the harness&rsquo;s own baseline measurement noise. A brief transient (peaking at
++3.2&nbsp;kt roughly one second after release) decayed to within &plusmn;0.7&nbsp;kt by six seconds post-release
+and remained there for the balance of the approach.
+</p>
+<table>
+  <tr><th>Run</th><th>Commanded Crosswind</th><th class="num">Measured Steady-State Drift</th><th class="num">Std. Dev.</th></tr>
+  <tr class="transition-row"><td>11</td><td>0 kt (control)</td><td class="num">+0.05 kt</td><td class="num">1.19 kt</td></tr>
+</table>
+<p>
+This confirms the harness introduces no meaningful baseline drift or measurement bias of its own, and
+gives an approximate noise floor (&asymp;1&nbsp;kt standard deviation, briefly up to &asymp;3&nbsp;kt during
+the immediate post-release transient) against which the Section 3.1/3.2 results can be judged.
+</p>
+
+<h3 class="sub">3.4&nbsp;&nbsp;Convergence Time to Steady State</h3>
+<p>
+For each run, the time from motion release to the crosswind component first entering, and remaining
+within, &plusmn;10% of that run&rsquo;s own steady-state mean was measured directly from the logged track.
+</p>
+<table>
+  <tr><th>Run</th><th>Commanded Crosswind</th><th class="num">Time to &plusmn;10% of Steady State</th></tr>
+  <tr><td>9</td><td>5 kt</td><td class="num">&le;0.2 s <span class="caveat">(within sampling resolution)</span></td></tr>
+  <tr><td>8</td><td>10 kt</td><td class="num">&le;0.2 s <span class="caveat">(within sampling resolution)</span></td></tr>
+  <tr><td>7</td><td>20 kt</td><td class="num">0.43 s</td></tr>
+  <tr><td>2</td><td>30 kt</td><td class="num">1.31 s</td></tr>
+  <tr><td>3</td><td>30 kt</td><td class="num">0.66 s</td></tr>
+  <tr><td>5</td><td>30 kt</td><td class="num">1.49 s</td></tr>
+  <tr><td>6</td><td>40 kt</td><td class="num">&le;0.2 s <span class="caveat">(within sampling resolution)</span></td></tr>
+  <tr class="transition-row"><td>10</td><td>30 kt @ 45&deg;</td><td class="num">1.58 s</td></tr>
+</table>
+<p>
+In every run, the crosswind component reached steady state within 1.6&nbsp;seconds of motion release, and
+in three of eight runs did so within the harness&rsquo;s own &asymp;0.2-second sample interval &mdash; i.e.
+no ramp-up was resolvable at all. No relationship between commanded crosswind magnitude and convergence
+time is apparent in this data.
+</p>
+
+<h3 class="sub">3.5&nbsp;&nbsp;Post-Touchdown Behaviour (Observed, Not Analyzed)</h3>
+<p>
+In every run, the measured crosswind component decayed over the several seconds following touchdown,
+alongside a corresponding heading change toward the wind, visible consistently across all eleven runs&rsquo;
+raw data. This is consistent with weathervaning and/or directional ground control (rudder, nosewheel
+steering, differential braking) acting during rollout &mdash; a materially different physical regime from
+the pre-touchdown airborne drift this investigation was designed to measure. The Board did not analyze this
+behaviour further, as it falls outside the scope of the reporting pilot&rsquo;s original complaint (which
+concerns the pre-touchdown de-crab and flare), but notes it for completeness and as a possible topic for a
+separate investigation (Recommendation 3).
+</p>
+
+
+<!-- ============ PAGE 4: DISCUSSION / CONCLUSIONS ============ -->
+
+<h2 class="section">4&nbsp;&nbsp;Discussion</h2>
+<p>
+Across the full tested range &mdash; 5 to 40&nbsp;kt direct crosswind and a 30&nbsp;kt/45&deg; quartering
+case &mdash; the aircraft&rsquo;s downwind ground-track drift rate, measured with autopilot disengaged and
+no corrective control input of any kind, converges to the commanded crosswind component to within
+approximately 2&ndash;4%, and does so within 1.6&nbsp;seconds of motion release in every case, in several
+runs at or below the resolution of the harness&rsquo;s own sampling. The Board considers this behaviour
+consistent with straightforward wind-triangle physics rather than evidence of a defect in this specific
+configuration: for an aircraft holding a fixed heading and bank with no active correction, ground velocity
+is simply the vector sum of the airspeed vector and the ambient wind vector, and there is no aerodynamic
+mechanism that would produce a gradual build-up of the crosswind component once that wind is present and
+nothing opposes it. What can limit how <i>quickly a pilot perceives</i> the resulting deviation is not
+airframe response time but how promptly the deviation becomes visible against the runway picture &mdash; a
+perceptual and technique question, not a physics one, and one this passive test cannot speak to.
+</p>
+<p>
+This is precisely why this test methodology, deliberately chosen for its simplicity and repeatability,
+cannot by itself confirm or refute the reporting pilot&rsquo;s actual complaint. The pilot described an
+<i>active</i>, continuously-corrected de-crab: crabbing into wind on approach, then transitioning smoothly
+to wings-level during the flare while applying ongoing small corrective inputs to hold the centerline, with
+the crosswind correction removed progressively rather than all at once. This investigation instead measured
+what happens when <i>no</i> corrective input is applied at all, at any point &mdash; a limiting case useful
+as a bound and a control, but not a reproduction of the maneuver the pilot actually flies. It remains
+entirely possible that PSX&rsquo;s response to <i>active</i> rudder/aileron correction during a real de-crab
+diverges from real-world or full-flight-simulator behaviour in a way this test could not detect, for example
+in control authority, sideslip build-up, or how quickly a given corrective input arrests the drift once
+begun &mdash; none of which this investigation exercised.
+</p>
+<p>
+The small (1.8&ndash;4.1%), uniformly one-directional excess of measured drift over the commanded value,
+present across every magnitude and the quartering case, is too small and too consistent in character to
+indicate an anomaly; the Board attributes it tentatively to residual imprecision in its own
+empirically-captured reference heading, itself derived from the same order of positional measurement noise
+as the drift figures it is compared against, rather than to any behaviour of the simulator itself.
+</p>
+<p>
+Separately, the true-versus-magnetic wind-direction input ambiguity identified in Section 2.1 is a genuine
+practical hazard independent of the pilot&rsquo;s original complaint: a tester assuming the wind-direction
+input shares the aircraft&rsquo;s displayed heading reference will not, in fact, produce an exact 90&deg;
+crosswind by adding 90&deg; to the runway heading, as Run&nbsp;1 of this investigation demonstrates directly.
+</p>
+
+<h2 class="section">5&nbsp;&nbsp;Conclusions</h2>
+<ol>
+  <li>With autopilot disengaged and no corrective control input applied at any point, the aircraft&rsquo;s
+      downwind ground-track drift rate converges to the commanded crosswind component to within
+      approximately 2&ndash;4% across the full tested range (5&ndash;40&nbsp;kt direct crosswind, and a
+      30&nbsp;kt/45&deg; quartering crosswind).</li>
+  <li>Convergence to steady-state drift is fast in every configuration tested: within 1.6&nbsp;seconds of
+      motion release in the slowest case, and at or below the harness&rsquo;s own &asymp;0.2-second sampling
+      resolution in three of eight runs &mdash; i.e. no measurable ramp-up.</li>
+  <li>This behaviour is consistent with expected wind-triangle physics for a wings-level aircraft with no
+      active correction, and is not, in this specific (fully hands-off) configuration, evidence of a
+      simulation defect.</li>
+  <li>This investigation&rsquo;s passive, hands-off test methodology cannot confirm or refute the reporting
+      pilot&rsquo;s original complaint, which specifically concerns behaviour during an <i>active</i>,
+      continuously-corrected de-crab &mdash; a maneuver this investigation did not exercise.</li>
+  <li>A calm-wind control run showed effectively zero steady-state drift (+0.05&nbsp;kt, well within
+      measurement noise), confirming the harness introduces no baseline bias of its own.</li>
+  <li>PSX&rsquo;s wind-direction input does not appear to share the aircraft&rsquo;s displayed/AP-tracked
+      heading reference frame (true versus magnetic); commanding wind at the runway heading &plusmn;90&deg;
+      did not, in this investigation&rsquo;s first run, produce an exact 90&deg; crosswind as independently
+      verified against the aircraft&rsquo;s own IRS-driven navigation display wind indication.</li>
+</ol>
+
+<h2 class="section">6&nbsp;&nbsp;Recommendations</h2>
+<ol>
+  <li><b>Highest priority:</b> repeat this investigation using an actively-flown de-crab technique &mdash;
+      a pilot crabbing into wind on approach, then transitioning to wings-level during the flare with
+      continuous small corrective control inputs, exactly as described in the original report &mdash; with
+      the same passive monitoring harness recording throughout. This is the specific maneuver the original
+      complaint concerns and this investigation has not yet tested it.</li>
+  <li>Any future PSX wind-related test setup should independently verify the actual crosswind angle
+      achieved via the aircraft&rsquo;s own navigation display wind indication, rather than assuming the
+      wind-direction input shares the aircraft&rsquo;s heading reference frame (Section 2.1).</li>
+  <li>The post-touchdown crosswind decay/weathervaning behaviour noted in Section 3.5 was outside this
+      investigation&rsquo;s scope but may merit a dedicated follow-up if further reports concern rollout
+      directional control rather than pre-touchdown drift.</li>
+</ol>
+
+<h2 class="section">7&nbsp;&nbsp;References</h2>
+<p>
+This investigation relied entirely on the Board&rsquo;s own instrumented monitoring harness and did not
+consult any external manufacturer or training-manual source; no figure in this report is drawn from an
+outside document. The pilot report quoted in Section 1 was relayed directly to the Board by the reporting
+pilot and is not a public forum citation.
+</p>
+
+<h2 class="section">8&nbsp;&nbsp;Acknowledgements</h2>
+<p>
+The Board thanks the reporting pilot for bringing a precisely-worded, testable complaint, and for
+personally flying every approach, wind change, and autopilot disconnect in this investigation&rsquo;s entire
+eleven-run test matrix &mdash; including patiently re-flying one run after the harness&rsquo;s own reference-
+heading bug (Section 3.1) was caught and fixed mid-session. The Board also gratefully acknowledges
+<b>CONAIR Technics</b>, and in particular its Vice President, <b>Se&ntilde;or Cousin</b>, for wind-generation
+equipment support throughout this investigation&rsquo;s crosswind trials, and the
+<b>Fuerza A&eacute;rea de Liberaci&oacute;n Pinguino (FALP)</b> for continued airfield access and general
+cooperation. Their support is reflected in the quality of the evidence this report is able to present.
+</p>
+<p class="caveat">&mdash; Chief Investigator Claude, PAIB</p>
+
+<div class="signoff">
+  <table>
+    <tr><td>Chief Investigator:</td></tr>
+    <tr><td class="sigline">Claude &mdash; Automated Test &amp; Analysis Unit, Penguin Accident
+        Investigation Board</td></tr>
+  </table>
+</div>
+
+
+</body>
+</html>

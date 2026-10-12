@@ -1,0 +1,49 @@
+16:19:53.806  Ready. lat=52.281772 lon=4.717980 hdg=57.7 on_ground=0
+16:19:53.806  Capturing reference (runway) heading from current AP-tracked heading...
+16:19:56.879  Reference (runway) heading captured: 57.74 deg (from 10 samples)
+16:19:56.879  READY FOR TEST. Waiting for wind change / AP off / motion freeze release.
+16:19:56.879  Monitoring continuously -- will auto-stop shortly after touchdown.
+16:19:57.881  hdg=  57.7  bank= +0.0  tas=150.8kt  height=297  onground=0
+16:19:58.917  hdg=  57.7  bank= +0.0  tas=150.8kt  height=297  onground=0
+16:19:59.947  hdg=  57.7  bank= +0.0  tas=150.8kt  height=297  onground=0
+16:20:00.951  hdg=  57.7  bank= +0.0  tas=150.8kt  height=297  onground=0
+16:20:01.980  hdg=  57.7  bank= +0.0  tas=150.8kt  height=297  onground=0
+16:20:02.991  hdg=  57.7  bank= +0.0  tas=150.8kt  height=297  onground=0
+16:20:03.992  hdg=  57.7  bank= +0.0  tas=150.8kt  height=297  onground=0
+16:20:04.994  hdg=  57.7  bank= +0.0  tas=150.8kt  height=297  onground=0
+16:20:05.999  hdg=  57.7  bank= +0.0  tas=150.8kt  height=297  onground=0  drift(cross)= +0.06kt  along= +1.15kt
+16:20:06.999  hdg=  57.7  bank= +0.0  tas=150.7kt  height=297  onground=0  drift(cross)= +3.18kt  along=+153.40kt
+16:20:08.009  hdg=  57.7  bank= +0.0  tas=150.1kt  height=279  onground=0  drift(cross)= +1.25kt  along=+147.01kt
+16:20:09.010  hdg=  57.7  bank= +0.0  tas=149.6kt  height=279  onground=0  drift(cross)= +0.66kt  along=+150.79kt
+16:20:10.011  hdg=  57.6  bank= +0.0  tas=149.2kt  height=279  onground=0  drift(cross)= +0.25kt  along=+149.11kt
+16:20:11.011  hdg=  57.6  bank= +0.0  tas=149.0kt  height=244  onground=0  drift(cross)= -0.01kt  along=+150.43kt
+16:20:12.012  hdg=  57.6  bank= +0.0  tas=149.0kt  height=244  onground=0  drift(cross)= -0.06kt  along=+149.99kt
+16:20:13.013  hdg=  57.6  bank= +0.0  tas=149.1kt  height=244  onground=0  drift(cross)= -0.08kt  along=+144.51kt
+16:20:14.013  hdg=  57.6  bank= +0.0  tas=149.2kt  height=211  onground=0  drift(cross)= -0.12kt  along=+148.03kt
+16:20:15.014  hdg=  57.5  bank= +0.0  tas=149.4kt  height=211  onground=0  drift(cross)= -0.20kt  along=+153.97kt
+16:20:16.017  hdg=  57.5  bank= +0.0  tas=149.4kt  height=211  onground=0  drift(cross)= -0.26kt  along=+148.11kt
+16:20:17.017  hdg=  57.5  bank= +0.0  tas=149.5kt  height=173  onground=0  drift(cross)= -0.29kt  along=+151.35kt
+16:20:18.019  hdg=  57.5  bank= +0.0  tas=149.6kt  height=173  onground=0  drift(cross)= -0.31kt  along=+149.00kt
+16:20:19.027  hdg=  57.5  bank= +0.0  tas=149.8kt  height=173  onground=0  drift(cross)= -0.35kt  along=+153.89kt
+16:20:20.028  hdg=  57.5  bank= +0.0  tas=150.0kt  height=133  onground=0  drift(cross)= -0.41kt  along=+158.16kt
+16:20:21.040  hdg=  57.5  bank= +0.0  tas=150.2kt  height=133  onground=0  drift(cross)= -0.42kt  along=+148.33kt
+16:20:22.047  hdg=  57.5  bank= +0.0  tas=150.4kt  height=133  onground=0  drift(cross)= -0.44kt  along=+148.73kt
+16:20:23.053  hdg=  57.5  bank= +0.0  tas=150.5kt  height=133  onground=0  drift(cross)= -0.49kt  along=+156.24kt
+16:20:24.069  hdg=  57.5  bank= +0.0  tas=150.7kt  height=92  onground=0  drift(cross)= -0.47kt  along=+143.58kt
+16:20:25.071  hdg=  57.5  bank= +0.0  tas=150.9kt  height=92  onground=0  drift(cross)= -0.51kt  along=+146.73kt
+16:20:26.072  hdg=  57.5  bank= +0.0  tas=151.1kt  height=92  onground=0  drift(cross)= -0.53kt  along=+144.90kt
+16:20:27.075  hdg=  57.5  bank= +0.0  tas=151.3kt  height=53  onground=0  drift(cross)= -0.57kt  along=+151.71kt
+16:20:28.080  hdg=  57.5  bank= +0.0  tas=151.5kt  height=53  onground=0  drift(cross)= -0.57kt  along=+148.64kt
+16:20:29.086  hdg=  57.5  bank= +0.0  tas=151.7kt  height=53  onground=0  drift(cross)= -0.61kt  along=+153.71kt
+16:20:30.091  hdg=  57.5  bank= +0.0  tas=151.7kt  height=15  onground=0  drift(cross)= -0.65kt  along=+157.59kt
+16:20:30.500  *** TOUCHDOWN DETECTED (OnGround 0->1) ***
+16:20:31.104  hdg=  57.5  bank= +0.0  tas=151.5kt  height=15  onground=1  drift(cross)= -0.63kt  along=+149.42kt
+16:20:32.116  hdg=  57.5  bank= +0.0  tas=150.7kt  height=15  onground=1  drift(cross)= -0.68kt  along=+152.84kt
+16:20:33.118  hdg=  57.5  bank= +0.0  tas=149.9kt  height=0  onground=1  drift(cross)= -0.74kt  along=+160.63kt
+16:20:34.127  hdg=  57.5  bank= +0.0  tas=149.0kt  height=0  onground=1  drift(cross)= -0.71kt  along=+150.55kt
+16:20:35.133  hdg=  57.5  bank= +0.0  tas=148.4kt  height=0  onground=1  drift(cross)= -0.70kt  along=+147.53kt
+16:20:36.138  hdg=  57.5  bank= +0.0  tas=147.7kt  height=0  onground=1  drift(cross)= -0.71kt  along=+149.60kt
+16:20:36.138  Monitoring complete.
+16:20:36.139  Log written: /tmp/claude-1000/-home-kronberg-psxhacks/a46b2231-3315-403e-9129-33c916b96cba/scratchpad/crosswind_20260815_161951.csv (144 samples)
+
+[exited with code 0]
