@@ -1,0 +1,648 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>PAIB Report 2026-016</title>
+<style>
+  @page { size: A4; margin: 22mm 18mm 20mm 18mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Georgia", "Times New Roman", serif;
+    color: #1a1f2b;
+    font-size: 10.8pt;
+    line-height: 1.5;
+    margin: 0;
+  }
+  .cover {
+    height: 253mm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    page-break-after: always;
+  }
+  .cover img.logo { width: 150px; height: 150px; margin-bottom: 18px; }
+  .cover .agency {
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #0d2340;
+    font-size: 13pt;
+  }
+  .cover .agency-sub {
+    font-family: "Arial", sans-serif;
+    font-size: 9pt;
+    color: #5a6472;
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+  .cover .divider {
+    width: 90px;
+    border-top: 2px solid #d9a441;
+    margin: 22px 0;
+  }
+  .cover h1 {
+    font-size: 21pt;
+    color: #0d2340;
+    margin: 0 0 6px 0;
+    max-width: 480px;
+  }
+  .cover h2 {
+    font-size: 12.5pt;
+    font-weight: 400;
+    color: #43506a;
+    margin: 0 0 26px 0;
+  }
+  .cover .metabox {
+    font-family: "Arial", sans-serif;
+    font-size: 9pt;
+    color: #333;
+    border: 1px solid #c8ccd4;
+    border-radius: 3px;
+    padding: 14px 26px;
+    text-align: left;
+    line-height: 1.9;
+  }
+  .cover .metabox b { color: #0d2340; display: inline-block; width: 140px; }
+  .cover .classification {
+    font-family: "Arial", sans-serif;
+    font-size: 8.3pt;
+    color: #9a3b3b;
+    letter-spacing: 1.5px;
+    margin-top: 30px;
+    border: 1px solid #9a3b3b;
+    padding: 3px 12px;
+    border-radius: 2px;
+  }
+  .cover .motto {
+    font-family: "Arial", sans-serif;
+    font-style: italic;
+    font-size: 8.5pt;
+    color: #8a94a3;
+    margin-top: 14px;
+  }
+
+  h2.section {
+    font-family: "Arial", sans-serif;
+    font-size: 13.5pt;
+    color: #0d2340;
+    border-bottom: 2px solid #d9a441;
+    padding-bottom: 4px;
+    margin: 26px 0 10px 0;
+  }
+  h3.sub {
+    font-family: "Arial", sans-serif;
+    font-size: 11pt;
+    color: #1c3d66;
+    margin: 16px 0 6px 0;
+  }
+  p { margin: 6px 0 10px 0; text-align: justify; }
+  ul, ol { margin: 6px 0 10px 22px; padding: 0; }
+  li { margin-bottom: 4px; }
+
+  .finding-box {
+    background: #f4f7fb;
+    border-left: 3px solid #1c3d66;
+    padding: 10px 14px;
+    margin: 12px 0;
+    font-size: 10.3pt;
+  }
+  .finding-box b.label {
+    font-family: "Arial", sans-serif;
+    font-size: 8pt;
+    letter-spacing: 1px;
+    color: #1c3d66;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9.3pt;
+    margin: 10px 0 16px 0;
+    font-family: "Arial", sans-serif;
+  }
+  th {
+    background: #0d2340;
+    color: #fff;
+    text-align: left;
+    padding: 6px 8px;
+    font-weight: 600;
+  }
+  td {
+    padding: 5px 8px;
+    border-bottom: 1px solid #e2e5ea;
+  }
+  tr:nth-child(even) td { background: #f7f9fb; }
+  td.num, th.num { text-align: right; }
+  .transition-row td { background: #fdf1e2 !important; font-weight: 600; }
+
+  .caveat {
+    font-size: 8.6pt;
+    color: #7b8494;
+    font-style: italic;
+  }
+
+  .logblock {
+    background: #0d1420;
+    color: #c9d6e8;
+    font-family: "Consolas", "Menlo", monospace;
+    font-size: 7.6pt;
+    line-height: 1.45;
+    padding: 8px 10px;
+    border-radius: 3px;
+    margin: 8px 0 12px 0;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+  }
+  .logblock .hl { color: #f0b86e; font-weight: 700; }
+
+  .signoff {
+    margin-top: 30px;
+    font-family: "Arial", sans-serif;
+    font-size: 9.5pt;
+  }
+  .signoff table { width: auto; border: none; }
+  .signoff td { border: none; padding: 3px 0; }
+  .sigline {
+    border-top: 1px solid #333;
+    width: 220px;
+    margin-top: 26px;
+    padding-top: 3px;
+    font-size: 8.3pt;
+    color: #555;
+  }
+
+  .footer-note {
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    font-size: 7.5pt;
+    color: #a3aab5;
+    margin-top: 30px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER PAGE ============ -->
+<div class="cover">
+  <img class="logo" src="PAIB-rubberband.png" alt="PAIB logo">
+  <div class="agency">PENGUIN ACCIDENT INVESTIGATION BOARD</div>
+  <div class="agency-sub">PENGUIN&rsquo;S DEMOCRATIC REPUBLIC OF PATAGONIA &nbsp;&bull;&nbsp; OFFICE OF FLIGHT OPERATIONS RESEARCH</div>
+  <div class="divider"></div>
+  <h1>Takeoff Roll Overspeed Anomaly Investigation</h1>
+  <h2>Boeing 747-400 &mdash; Two Independent Field Incidents of Anomalous Takeoff-Roll Acceleration Traced to a Negative Brake-Lever Network Value</h2>
+  <div class="metabox">
+    <div><b>Report Number</b> PAIB/2026/016</div>
+    <div><b>Investigation Type</b> Incident Investigation</div>
+    <div><b>Aircraft Type</b> Boeing 747-400 (simulated, PSX)</div>
+    <div><b>Trigger</b> Two independent flight-data anomalies: VHHH 2026-10-10, EDDF 2026-10-12</div>
+    <div><b>Date of Issue</b> 12 October 2026</div>
+    <div><b>Status</b> Published &mdash; root cause identified; both parties already notified</div>
+    <div><b>Investigator-in-Charge</b> Claude, Automated Test &amp; Analysis Unit</div>
+  </div>
+  <div class="classification">DISTRIBUTION: UNRESTRICTED &mdash; PUBLIC RELEASE</div>
+  <div class="motto">&ldquo;In Claude Confidimus&rdquo;</div>
+</div>
+
+<!-- ============ PAGE 2: SUMMARY ============ -->
+
+<h2 class="section">Executive Summary</h2>
+<p>
+This investigation was opened after flight-data telemetry from two unrelated takeoff rolls &mdash; VHHH,
+10&nbsp;October&nbsp;2026, and EDDF, 12&nbsp;October&nbsp;2026, flown two days apart in different
+shared-cockpit network topologies (VHHH multi-crew, EDDF single-pilot) &mdash; showed takeoff acceleration substantially above both
+a matched-weight controlled baseline and published real-world 747-400 performance. The Board traced each
+anomaly through the full forwarding chain, from the Main Server&rsquo;s own position/speed telemetry
+(<code>Qs121</code>), back through two router hops, to a half-to-one-second burst of the brake-lever
+variable (<code>Qs357</code>) ramping from a normal positive value, through zero, to approximately
+<code>&minus;990&nbsp;to&nbsp;&minus;997</code> &mdash; coincident, in both incidents independently, with
+the exact instant the takeoff roll began. A deliberately injected, sustained negative brake value during a
+live, monitored control test reproduced the mechanism in dramatic, unambiguous form: acceleration roughly
+double the field incidents&rsquo;, and a climb that reached 285&nbsp;knots and over 9,000&nbsp;ft/min before
+an abrupt simulator-state reset. Both bursts were traced, independently and by the same two-hop method, to
+the identical piece of client software &mdash; <b>FrankenUSB 1.2.1</b>, a third-party USB-input addon &mdash;
+running behind the same installation&rsquo;s router node in both incidents, five days and one
+addon-version-number apart on the router hop in between &mdash; not the installation of whoever occupied
+the controls during either incident flight, but of the investigating pilot who subsequently flew the
+follow-up tests described below. The investigating pilot has identified a brake-axis calibration fault in
+their own FrankenUSB configuration and is correcting it; separately, they have reported to the Aerowinx
+developer that PSX&rsquo;s own flight-physics model accepts a brake-lever value outside its valid range and
+converts it into unbounded forward acceleration rather than rejecting or clamping it &mdash; which the
+Board considers the true root cause, since no client has any legitimate reason to send such a value in the
+first place, and a client-side input error of this kind should not be capable of producing a simulated
+performance deviation of this magnitude.
+</p>
+
+<div class="finding-box">
+  <b class="label">KEY FINDING</b>
+  Both takeoff-roll acceleration anomalies coincide with a brief burst of the <code>Qs357</code> (Brakes)
+  network variable running from a normal positive value through zero to roughly &minus;990 to &minus;997,
+  sent in both cases by the same local client &mdash; FrankenUSB 1.2.1 &mdash; on the investigating pilot&rsquo;s
+  installation. A controlled live test confirms the causal mechanism directly: a sustained negative
+  <code>Qs357</code> value drives greatly amplified, effectively unbounded forward acceleration in PSX&rsquo;s
+  physics model. See Sections&nbsp;3.6&ndash;3.8.
+</div>
+
+<h3 class="sub">Scope of Investigation</h3>
+<ul>
+  <li>Full reconstruction of both incidents&rsquo; takeoff rolls from Main Server <code>Qs121</code>
+      telemetry, with two independent acceleration estimates (TAS-derived and great-circle-distance-derived)
+      per event</li>
+  <li>Gross-weight reconstruction and verification that no weight change occurred during either roll</li>
+  <li>A matched-weight, standalone, add-on-free controlled baseline takeoff, flown by the investigating pilot and
+      instrumented by the Board, for direct comparison</li>
+  <li>A reference range for real-world 747-400 takeoff acceleration from published anecdotal pilot data</li>
+  <li>Empirical decoding of the FMC takeoff-reference string (<code>Qs396</code>) sufficient to cross-check
+      thrust derate against both incidents</li>
+  <li>Full packet-level tracing of the anomalous brake signal through every router hop to its originating
+      client, independently for both incidents</li>
+  <li>A deliberate, controlled live reproduction of the suspected mechanism (sustained negative
+      <code>Qs357</code> injection) on a standalone Main Server</li>
+</ul>
+
+<h2 class="section">1&nbsp;&nbsp;Background</h2>
+<p>
+On 10&nbsp;October&nbsp;2026, a multi-crew, shared-cockpit flight into VHHH (FTECH1 acting as master router,
+with BAKER, LIPPA, and 30WEST/slavesim as remote slave routers) departed with a takeoff roll that, on
+review of the master router&rsquo;s own traffic log, showed the aircraft accelerating noticeably faster than
+expected. Two days later, on 12&nbsp;October&nbsp;2026, a materially simpler, single-pilot flight into EDDF
+(MAWEA1 as master, 30WEST/slavesim as its only remote slave) showed the same pattern. The two flights were
+flown by different crews &mdash; the VHHH crew and the EDDF pilot are not the same individual(s), and
+neither is the investigating pilot who subsequently flew this report&rsquo;s follow-up tests
+(Sections&nbsp;3.5 and 3.9). Both router logs are the router&rsquo;s own authoritative record of every
+keyword it sent and received, including exact client attribution (which connected client slot a given
+update was received from) and millisecond timestamps, and are not subject to replay or display artefacts on
+any one participant&rsquo;s screen.
+</p>
+<p>
+Because the same FrankenUSB-equipped 30WEST/slavesim installation was present, and client-attributable, in
+both incidents (Section&nbsp;3.8), and because both resembled each other closely enough in signature to
+suspect a common cause, the Board treated them as a single investigation from the outset rather than two
+unrelated reports. The 30WEST/slavesim node&rsquo;s presence in both incidents reflects that one
+participant&rsquo;s equipment was connected to both networks, not that the same person was at the controls
+of the aircraft in either case.
+</p>
+
+<h2 class="section">2&nbsp;&nbsp;Methodology</h2>
+<h3 class="sub">2.1&nbsp;&nbsp;The <code>Qs121</code> (<code>PiBaHeAlTas</code>) Telemetry Variable</h3>
+<p>
+PSX broadcasts the aircraft&rsquo;s own instantaneous pitch, bank, true heading, true altitude, true
+airspeed, latitude, and longitude as a single semicolon-delimited string on <code>Qs121</code>
+(friendly name <code>PiBaHeAlTas</code>), at the Main Server&rsquo;s native update rate. Decoded:
+pitch/bank are the first two fields in millionths of a radian; true heading is the third field, already in
+radians; true altitude (ft) is the fourth field divided by 1000; true airspeed (kt) is the fifth field
+divided by 1000; latitude/longitude are the sixth and seventh fields, in radians. This is the Main
+Server&rsquo;s own ground truth for aircraft state and was used as the sole basis for every acceleration
+figure in this report.
+</p>
+<h3 class="sub">2.2&nbsp;&nbsp;Roll-Window Anchors</h3>
+<p>
+For each incident, the start anchor is the <i>last</i> logged <code>Qs121</code> sample showing exactly
+zero true airspeed before the roll &mdash; deliberately more conservative than anchoring on brake release or
+throttle advance, either of which can occur with the aircraft still stationary for some time beforehand, and
+chosen so that no figure in this report could be inflated by excluding dead time from the denominator. The
+end anchor is a specific, comparable high-speed point on the same roll, chosen per incident as described in
+Section&nbsp;3.
+</p>
+<h3 class="sub">2.3&nbsp;&nbsp;Gross Weight Reconstruction</h3>
+<p>
+Gross weight is reconstructed as <code>TrueZfw</code> (<code>Qi123</code>, lb) plus the sum of the first
+nine semicolon-delimited fields of <code>FuelQty</code> (<code>Qs438</code>, in units of 0.1&nbsp;lb,
+divided by 10), converted lb&rarr;kg by &times;0.453592. Both router logs were checked for any
+<code>Qi123</code> traffic within the relevant roll window (none found in either case &mdash; it is an
+econ-mode variable, so its total absence confirms it genuinely never changed) and for any
+<code>Qs438</code> traffic flowing <i>to</i> the upstream Main Server rather than only broadcast
+<i>from</i> it (none found in either case, confirming no client altered fuel state during either roll).
+</p>
+<h3 class="sub">2.4&nbsp;&nbsp;Independent Distance-Based Cross-Check</h3>
+<p>
+As a check independent of the TAS field entirely, the great-circle distance between the start and end
+anchors&rsquo; latitude/longitude was computed via the haversine formula, and a second acceleration estimate
+derived from simple constant-acceleration-from-rest kinematics, <code>a&nbsp;=&nbsp;2s/t&sup2;</code>. This
+method is expected to under-read the TAS-derived figure in every case, including a genuine, non-anomalous
+takeoff, because real acceleration is front-loaded (drag rises with the square of speed) rather than
+constant &mdash; it is reported as a sanity check on relative comparisons, not as an independently accurate
+absolute figure.
+</p>
+
+<!-- ============ FINDINGS ============ -->
+
+<h2 class="section">3&nbsp;&nbsp;Findings</h2>
+
+<h3 class="sub">3.1&nbsp;&nbsp;EDDF Incident &mdash; Raw Evidence and Acceleration</h3>
+<p>
+End anchor chosen at 150.26&nbsp;kt, a value also used for the VHHH-comparable baseline (Section&nbsp;3.4)
+to keep the two directly comparable.
+</p>
+<div class="logblock">06:17:02,762: Qs121=0;0;4.360957048438884;360756;<span class="hl">0</span>;0.8734390348944533;0.1498149689016648&nbsp;&nbsp;&nbsp;(TAS=0.00&nbsp;kt &mdash; start anchor)
+06:17:23,618: Qs121=17293;11;4.368680064484327;354138;<span class="hl">150256</span>;0.8734072703032263;0.14967877133960306&nbsp;&nbsp;&nbsp;(TAS=150.26&nbsp;kt &mdash; end anchor)</div>
+<p>
+&Delta;t&nbsp;=&nbsp;20.856&nbsp;s. TAS-derived average acceleration &asymp;&nbsp;<b>3.7&nbsp;m/s&sup2;</b>.
+Haversine distance between anchors: 592.9&nbsp;m, giving a distance-derived estimate of
+&asymp;&nbsp;2.73&nbsp;m/s&sup2;.
+</p>
+<h3 class="sub">3.2&nbsp;&nbsp;EDDF Gross Weight</h3>
+<p>
+<code>TrueZfw</code> 507,063&nbsp;lb + <code>FuelQty</code> total 43,345&nbsp;lb = 550,408&nbsp;lb
+&asymp;&nbsp;249,661&nbsp;kg &asymp;&nbsp;<b>249.7&nbsp;t</b>. No <code>Qi123</code> traffic and no
+client-originated <code>Qs438</code> traffic occurred within the roll window (Section&nbsp;2.3).
+</p>
+
+<h3 class="sub">3.3&nbsp;&nbsp;VHHH Incident &mdash; Raw Evidence and Acceleration</h3>
+<p>
+End anchor chosen at 189.85&nbsp;kt &mdash; the highest clean pre-anomaly-resolution value available in this
+log before the roll report was raised; no equal-speed EDDF/VHHH comparison is drawn directly, each is
+compared against its own matched-weight or physics-derived reference instead.
+</p>
+<div class="logblock">16:18:45,209: Qs121=0;0;1.2352680759649486;21807;<span class="hl">0</span>;0.3891467101408183;1.987907885539851&nbsp;&nbsp;&nbsp;(TAS=0.00&nbsp;kt &mdash; start anchor)
+16:19:13,075: Qs121=29603;4075;1.2544986065213735;118060;<span class="hl">189853</span>;0.3892034047869475;1.9880897186056794&nbsp;&nbsp;&nbsp;(TAS=189.85&nbsp;kt &mdash; end anchor)</div>
+<p>
+&Delta;t&nbsp;=&nbsp;27.866&nbsp;s. TAS-derived average acceleration &asymp;&nbsp;<b>3.5&nbsp;m/s&sup2;</b>.
+Haversine distance: 1131.1&nbsp;m, giving a distance-derived estimate of &asymp;&nbsp;2.91&nbsp;m/s&sup2;.
+</p>
+<h3 class="sub">3.4&nbsp;&nbsp;VHHH Gross Weight</h3>
+<p>
+<code>TrueZfw</code> 452,285&nbsp;lb + <code>FuelQty</code> total 63,881&nbsp;lb &asymp;&nbsp;234,129&nbsp;kg
+&asymp;&nbsp;<b>234.1&nbsp;t</b>. As in the EDDF case, no weight-affecting traffic of any kind occurred within
+the roll window.
+</p>
+
+<h3 class="sub">3.5&nbsp;&nbsp;Matched-Weight Controlled Baseline</h3>
+<p>
+To obtain a direct comparator rather than relying solely on third-party reference figures, the investigating
+pilot flew a standalone, router-free, addon-free takeoff on a plain PSX Main Server, loaded to within
+20&nbsp;kg of the EDDF incident&rsquo;s reconstructed gross weight (440,925&nbsp;lb ZFW + 109,533&nbsp;lb
+fuel &asymp;&nbsp;249,683&nbsp;kg, vs. EDDF&rsquo;s 249,661&nbsp;kg), while the Board logged
+<code>PiBaHeAlTas</code>/<code>TrueZfw</code>/<code>FuelQty</code> passively throughout. The aircraft held
+exactly zero TAS for a genuine 26-second ground dwell after brake release (standard procedure: release
+brakes, then advance to TOGA shortly after) before smooth, continuous acceleration began; the roll-start
+anchor below is the point acceleration actually began, not the earlier brake-release moment, so this dwell
+time is correctly excluded from the figure.
+</p>
+<div class="logblock">20:01:45.009: Qs121=0;0;1.7769999504348775;32321;<span class="hl">21</span>;0.21279459414855853;-1.203847555131593&nbsp;&nbsp;&nbsp;(TAS=0.02&nbsp;kt &mdash; start anchor)
+20:02:17.606: Qs121=236;0;1.7751273381728598;32608;<span class="hl">150492</span>;0.21275911665222577;-1.203673222348535&nbsp;&nbsp;&nbsp;(TAS=150.49&nbsp;kt &mdash; end anchor)</div>
+<p>
+&Delta;t&nbsp;=&nbsp;32.597&nbsp;s. TAS-derived average acceleration &asymp;&nbsp;<b>2.4&nbsp;m/s&sup2;</b>.
+Haversine distance: 1108.9&nbsp;m, giving a distance-derived estimate of &asymp;&nbsp;2.09&nbsp;m/s&sup2;.
+This baseline &mdash; at effectively the same weight as EDDF, over a comparable 0&rarr;150&nbsp;kt speed
+range &mdash; accelerated roughly <b>35% slower</b> than the EDDF incident by the TAS-derived method (2.4 vs.
+3.7&nbsp;m/s&sup2;), and the VHHH incident (3.5&nbsp;m/s&sup2;, different weight) shows the same order of
+excess.
+</p>
+
+<h3 class="sub">3.6&nbsp;&nbsp;Reference Range for Real-World 747-400 Takeoff Acceleration</h3>
+<p>
+No Boeing FCOM/ACAP figure was independently obtained for this report (two Boeing ACAP document URLs
+located by web search returned HTTP&nbsp;404 and were not substituted with an unverified source). The best
+sourced anecdotal figure found is from an experienced 747-400 pilot&rsquo;s account on the gt40s.com
+aviation forum: approximately 396&nbsp;t, still air, ISA+15&deg;C, a ground roll of roughly 40&ndash;45
+seconds and 9,500&ndash;10,000&nbsp;ft to a rotation speed of 175&ndash;180&nbsp;kt, implying an average
+acceleration of roughly <b>2.0&ndash;2.3&nbsp;m/s&sup2;</b>.
+<span class="caveat">This figure is explicitly anecdotal pilot testimony, not a manufacturer-certified
+value, is at a different weight than either incident, and was not independently verified by the Board
+against Boeing&rsquo;s &ldquo;747-400 Airplane Characteristics for Airport Planning&rdquo; (D6-58326-1),
+which is named here as the authoritative document for anyone wishing to verify it directly.</span> It is
+presented only as a broad sanity check: the Board&rsquo;s own matched-weight baseline (2.4&nbsp;m/s&sup2;,
+Section&nbsp;3.5) already falls within this same general range, and both field incidents (3.5&ndash;3.7
+m/s&sup2;) sit visibly above it.
+</p>
+
+<h3 class="sub">3.7&nbsp;&nbsp;Discovery of the Anomalous Brake-Lever Signal</h3>
+<p>
+Reviewing the full set of keywords each client sent to the Main Server during both roll windows &mdash;
+undertaken to rule out an undocumented write affecting the aircraft&rsquo;s weight or control state &mdash;
+surfaced eighteen rapid updates to <code>Qs357</code> (friendly name <code>Brakes</code>) in the EDDF log, all
+within a single roughly one-second window exactly coincident with roll onset. The values are not ordinary
+pedal noise: they ramp smoothly from a normal applied-brake value, through zero, into strongly negative
+values far outside <code>Qs357</code>&rsquo;s expected and documented range. The Board&rsquo;s own domain
+knowledge of this variable is that brake pedal input should only ever range from 1000 (fully applied) down
+to approximately 0 (released) &mdash; never negative.
+</p>
+<div class="logblock">06:17:06,083: DATA TO [upstream] Qs357=894;894
+06:17:06,138: DATA TO [upstream] Qs357=721;721
+06:17:06,195: DATA TO [upstream] Qs357=566;566
+06:17:06,254: DATA TO [upstream] Qs357=423;423
+06:17:06,307: DATA TO [upstream] Qs357=211;211
+06:17:06,362: DATA TO [upstream] Qs357=<span class="hl">-30;-30</span>
+06:17:06,417: DATA TO [upstream] Qs357=-181;-181
+06:17:06,473: DATA TO [upstream] Qs357=-303;-303
+06:17:06,527: DATA TO [upstream] Qs357=-388;-388
+06:17:06,581: DATA TO [upstream] Qs357=-452;-452
+06:17:06,635: DATA TO [upstream] Qs357=-500;-500
+06:17:06,693: DATA TO [upstream] Qs357=-546;-546
+06:17:06,748: DATA TO [upstream] Qs357=-597;-597
+06:17:06,802: DATA TO [upstream] Qs357=-787;-787
+06:17:06,859: DATA TO [upstream] Qs357=-860;-860
+06:17:06,915: DATA TO [upstream] Qs357=-950;-950
+06:17:06,972: DATA TO [upstream] Qs357=-987;-987
+06:17:07,027: DATA TO [upstream] Qs357=<span class="hl">-997;-997</span></div>
+<p>
+The VHHH log, reviewed independently (i.e. before, not after, comparing notes with the EDDF window), shows
+the identical signature at that incident&rsquo;s own roll onset:
+</p>
+<div class="logblock">16:18:47,566: DATA TO [upstream] Qs357=870;870
+16:18:47,620: DATA TO [upstream] Qs357=<span class="hl">-60;-60</span>
+16:18:47,677: DATA TO [upstream] Qs357=-764;-764
+16:18:47,731: DATA TO [upstream] Qs357=-943;-943
+16:18:47,785: DATA TO [upstream] Qs357=-984;-984
+16:18:47,838: DATA TO [upstream] Qs357=<span class="hl">-994;-994</span></div>
+<p>
+In both incidents the burst ends within 95&nbsp;ms to several hundred ms of the aircraft&rsquo;s TAS first
+departing from zero in the Main Server&rsquo;s own telemetry, i.e. the negative-brake event and the start of
+the takeoff roll are, to the resolution of these logs, the same event.
+</p>
+
+<h3 class="sub">3.8&nbsp;&nbsp;Tracing the Signal to Its Source</h3>
+<p>
+Each router log records, for every keyword, which locally-connected client slot it was received from
+(<code>DATA&nbsp;FROM&nbsp;[n]</code>) before it is forwarded onward. Because both incidents involved a
+chain of routers, each burst was traced one hop at a time.
+</p>
+<table>
+  <tr><th>Incident</th><th>Hop&nbsp;1 (seen by master router)</th><th>Hop&nbsp;2 (seen by slave router)</th><th>Originating client</th></tr>
+  <tr><td>EDDF (MAWEA1 master)</td><td>Client&nbsp;5 = <code>slavesim:FRANKEN.PY&hellip;30WEST&nbsp;1.17.0</code></td><td>Client&nbsp;4 on slavesim = <code>USB:FrankenUSB&nbsp;1.2.1</code></td><td rowspan="2" style="vertical-align:middle;font-weight:600">FrankenUSB 1.2.1, same installation, both incidents</td></tr>
+  <tr><td>VHHH (FTECH1 master)</td><td>Client&nbsp;22 = <code>slavesim:FRANKEN.PY&hellip;30WEST&nbsp;1.10.0</code></td><td>Client&nbsp;6 on slavesim = <code>USB:FrankenUSB&nbsp;1.2.1</code></td></tr>
+</table>
+<p>
+Both bursts resolve to the identical client identity &mdash; <code>USB:FrankenUSB&nbsp;1.2.1</code>, a
+third-party PSX USB-input addon &mdash; running behind the investigating pilot&rsquo;s 30WEST/slavesim router
+node in both incidents, despite that router node itself having been upgraded from version 1.10.0 to 1.17.0
+in the five days between the two events. The router upgrade in between is a direct basis for ruling the
+router out as a candidate cause: the fault persisted unchanged across a version boundary in the one piece of
+software that did change, while the one piece of software that did <i>not</i> change &mdash; FrankenUSB
+1.2.1 on the investigating pilot&rsquo;s own machine &mdash; is exactly the piece both incidents have in
+common. The investigating pilot was not at the controls of the aircraft in either incident (see
+Section&nbsp;1); their equipment was present on the network as one of several connected clients.
+</p>
+
+<h3 class="sub">3.9&nbsp;&nbsp;Live Confirmatory Test</h3>
+<p>
+To test directly whether a negative <code>Qs357</code> value is capable of causing anomalous acceleration
+(as opposed to merely correlating with it by coincidence), the investigating pilot flew a further controlled
+takeoff on a standalone Main Server while the Board logged telemetry, and, immediately after a normal brake
+release, manually sent a single sustained <code>Qs357=&minus;994;&minus;994</code> to the server (a value
+drawn directly from the VHHH burst, Section&nbsp;3.7) and held it rather than letting it self-correct as
+the field incidents&rsquo; brief bursts did.
+</p>
+<div class="logblock">20:30:39.015: PiBaHeAlTas TAS=0.03 kt   (brake release / roll start)
+20:30:50.493: PiBaHeAlTas TAS=156.14 kt   (&Delta;t=11.48 s &rarr; &asymp;7.0 m/s&sup2;, already ~2&times; the matched baseline)
+20:30:59.684: PiBaHeAlTas TAS=255.31 kt
+20:31:09.054: PiBaHeAlTas TAS=<span class="hl">285.27 kt</span>  (peak)
+20:31:05.522&ndash;20:31:06.346: altitude 924.3&rarr;1050.8 ft in 0.824 s &rarr; <span class="hl">&asymp;9,220 ft/min</span> climb rate
+20:31:18.037: PiBaHeAlTas pitch=4.14&deg; alt=3730.9 ft TAS=259.56 kt
+20:31:18.164: PiBaHeAlTas pitch=0.00&deg; alt=24.3 ft TAS=<span class="hl">0.00 kt</span>   (instantaneous reset, next sample)
+20:31:18.159: WEIGHT TrueZfw=529109   (jumped from the pre-test 440,925 lb &mdash; confirms a full situation reload, not merely a speed/altitude glitch)</div>
+<p>
+From brake release to peak speed, average acceleration was &asymp;&nbsp;<b>4.9&nbsp;m/s&sup2;</b> &mdash;
+roughly double the matched-weight baseline and well above either field incident &mdash; climbing to a
+simulated 285&nbsp;kt and over 9,000&nbsp;ft/min of climb before the simulator abruptly reset to a parked
+state, evidenced by the simultaneous, instantaneous jump in <code>TrueZfw</code> and
+<code>FuelQty</code> back to full values alongside the speed/altitude/pitch reset. This is markedly more
+extreme than either field incident because the negative value was deliberately injected and held constant,
+rather than occurring as a brief, partially self-correcting hardware/calibration glitch as in the field
+data; the test was intended to establish the mechanism unambiguously, not to reproduce the field
+incidents&rsquo; exact magnitude. It does so: a negative brake-lever value drives sustained, essentially
+unbounded forward acceleration in PSX&rsquo;s physics model, fully consistent with, and sufficient to
+explain, the smaller excess measured in both real incidents.
+</p>
+
+<h3 class="sub">3.10&nbsp;&nbsp;Thrust Derate Cross-Check</h3>
+<p>
+Because a derated takeoff should accelerate <i>more slowly</i> than a full-power one, not faster, the
+Board checked whether either incident was flown at reduced thrust, which would make the true acceleration
+deficit larger than Section&nbsp;3.5&ndash;3.6 show, not smaller. The FMC takeoff-reference string
+(<code>Qs396</code>) carries V1/VR/V2 in its <code>e</code>/<code>f</code>/<code>g</code> fields (determined
+empirically on a live server by cycling thrust-rating selections and observing the resulting shift, no
+field independently encodes the derate selection itself, only its downstream V-speed effect is visible on
+the wire):
+</p>
+<table>
+  <tr><th>Condition (live test, &asymp;250&nbsp;t)</th><th class="num">V1</th><th class="num">VR</th><th class="num">V2</th></tr>
+  <tr><td>TO (full power)</td><td class="num">144</td><td class="num">158</td><td class="num">171</td></tr>
+  <tr><td>TO1 (8% fixed derate)</td><td class="num">125</td><td class="num">125</td><td class="num">147</td></tr>
+  <tr><td>TO2 (20% fixed derate)</td><td class="num">119</td><td class="num">131</td><td class="num">147</td></tr>
+  <tr class="transition-row"><td>EDDF incident, as flown (249.7&nbsp;t)</td><td class="num">127</td><td class="num">127</td><td class="num">147</td></tr>
+</table>
+<p>
+EDDF&rsquo;s actual V-speeds are an extremely close match to the TO1 (8% derate) test at essentially the
+same weight, strong evidence the EDDF incident was flown at a measurable thrust derate &mdash; meaning its
+true acceleration deficit against a full-power reference is almost certainly larger than the already-anomalous
+excess reported in Section&nbsp;3.1/3.5. No equivalent same-weight reference exists for VHHH, so no comparable
+claim is made for that incident; its own pre-roll <code>Qs396</code> read 123/131/143, consistent with some
+derate having been selected but not quantifiable without a matching-weight comparison.
+</p>
+
+<!-- ============ DISCUSSION / CONCLUSIONS ============ -->
+
+<h2 class="section">4&nbsp;&nbsp;Discussion</h2>
+<p>
+The investigation&rsquo;s structure &mdash; two independent incidents, a purpose-built matched-weight
+control flight, an independent distance-based cross-check, an empirical decode of an undocumented FMC
+string, and a deliberate live reproduction of the suspected mechanism &mdash; was considerably more
+elaborate than the eventual finding turned out to require. The actual fault, once located, is a single
+pilot&rsquo;s brake-pedal axis calibration in one addon&rsquo;s configuration file, overshooting its
+intended 0&ndash;1000 range into negative territory for a fraction of a second at the moment of brake
+release. The Board does not consider this disproportionate effort wasted: the magnitude of the resulting
+anomaly (a measurable multi-percent acceleration excess in the field, and an extreme, unmistakable one under
+deliberate test) gave no a priori reason to expect so narrow and mundane a cause, and ruling out gross
+weight error, thrust derate, router version skew, and simple measurement noise was necessary before the
+brake signal could be trusted as causal rather than coincidental.
+</p>
+<p>
+The Board draws a firm distinction between the <i>proximate</i> cause and what it considers the
+<i>underlying</i> cause. The proximate cause &mdash; a miscalibrated brake axis in one pilot&rsquo;s
+FrankenUSB 1.2.1 configuration, sending a transient out-of-range value &mdash; is a local configuration fault,
+already identified and being corrected by the investigating pilot, and is not evidence of a defect in FrankenUSB
+as distributed. The underlying cause, in the Board&rsquo;s assessment, is that Aerowinx PSX&rsquo;s own
+flight-physics model accepts a <code>Qs357</code> value outside its documented and sensible 0&ndash;1000
+range and converts it into a large, sustained forward driving force rather than clamping, ignoring, or
+rejecting it. No legitimate client has any reason to send a negative brake value, so no legitimate flight
+should ever be able to trigger this path &mdash; but the live test in Section&nbsp;3.9 demonstrates that when
+it is triggered, by whatever means, the resulting performance deviation is entirely out of proportion to a
+single bad network packet. This is the behaviour the Board considers the genuine subject of this report, and
+it is a defect in the simulator&rsquo;s own input handling, not in any addon.
+</p>
+
+<h2 class="section">5&nbsp;&nbsp;Conclusions</h2>
+<ol>
+  <li>Both the VHHH (10&nbsp;Oct&nbsp;2026) and EDDF (12&nbsp;Oct&nbsp;2026) takeoff rolls showed average
+      acceleration (3.5 and 3.7&nbsp;m/s&sup2; respectively, TAS-derived) measurably above a matched-weight
+      controlled baseline (2.4&nbsp;m/s&sup2;) and above the Board&rsquo;s best available real-world reference
+      range (&asymp;2.0&ndash;2.3&nbsp;m/s&sup2;, anecdotal).</li>
+  <li>Both incidents coincide, to within a fraction of a second, with a brief burst of the
+      <code>Qs357</code> (Brakes) variable ramping from a normal positive value through zero to
+      approximately &minus;990 to &minus;997 &mdash; a value range outside any legitimate operating range for
+      that variable.</li>
+  <li>Both bursts were traced, independently, through two router hops each, to the identical client software
+      &mdash; FrankenUSB 1.2.1 &mdash; running behind the investigating pilot&rsquo;s router node in both
+      incidents (not the installation of whoever was at the controls during either incident flight),
+      despite that router node having been upgraded between the two events, which rules the router itself out
+      as the cause.</li>
+  <li>A deliberate live test, injecting and holding a sustained negative <code>Qs357</code> value, reproduced
+      greatly amplified acceleration (&asymp;4.9&nbsp;m/s&sup2; to peak, 285&nbsp;kt, &gt;9,000&nbsp;ft/min
+      climb) before an abrupt full-situation reset, directly confirming the causal mechanism.</li>
+  <li>The EDDF incident was flown at a measurable thrust derate (V-speeds matching an 8%-derate reference at
+      the same weight), meaning its true acceleration deficit against a full-power baseline is larger than
+      the already-anomalous figure reported in this investigation, not smaller.</li>
+  <li>The proximate cause is a brake-axis calibration fault specific to one pilot&rsquo;s FrankenUSB 1.2.1
+      configuration, not a defect in FrankenUSB as distributed; the underlying cause is that PSX&rsquo;s
+      flight-physics model does not validate or clamp the <code>Qs357</code> value to its intended range, and
+      converts an out-of-range negative value into disproportionate, effectively unbounded forward
+      acceleration.</li>
+</ol>
+
+<h2 class="section">6&nbsp;&nbsp;Recommendations</h2>
+<ol>
+  <li><b>Already in progress:</b> the investigating pilot is correcting the FrankenUSB brake-axis calibration
+      that allowed the out-of-range value to be sent, and has separately reported the underlying PSX
+      input-validation behaviour directly to the Aerowinx developer. No further action is required of the
+      Board on either front at this time.</li>
+  <li>Any PSX client software that derives <code>Qs357</code> from a raw hardware axis should clamp the
+      computed value to [0,&nbsp;1000] before transmission, regardless of calibration correctness, as a
+      defensive measure against exactly this class of fault.</li>
+  <li>Once Aerowinx addresses the underlying input-validation gap, the Board recommends a brief follow-up
+      verification repeating the Section&nbsp;3.9 live test against the fixed version, to confirm a
+      deliberately-sent out-of-range <code>Qs357</code> value is then safely rejected or clamped rather than
+      affecting aircraft performance.</li>
+</ol>
+
+<h2 class="section">7&nbsp;&nbsp;References</h2>
+<p>
+gt40s.com aviation forum, &ldquo;Jumbo acceleration query&rdquo; (thread 26172) &mdash; anecdotal 747-400
+pilot account cited in Section&nbsp;3.6, not independently verified against manufacturer data. Boeing
+&ldquo;747-400 Airplane Characteristics for Airport Planning&rdquo; (D6-58326-1) is named in the same section
+as the authoritative source for anyone wishing to verify the reference range directly; it was not accessed by
+the Board for this report. All other evidence is drawn entirely from the Board&rsquo;s own router traffic
+logs, live instrumentation, and the investigating pilot&rsquo;s own test flights.
+</p>
+
+<h2 class="section">8&nbsp;&nbsp;Acknowledgements</h2>
+<p>
+The Board thanks the investigating pilot for flying both the matched-weight baseline and the deliberate
+negative-brake live test entirely at the Board&rsquo;s request, and for independently identifying and
+correcting the underlying FrankenUSB configuration fault once it was located. The two incident flights that
+opened this investigation were flown by others &mdash; a full crew for VHHH, a single pilot for EDDF &mdash;
+neither of whom is the investigating pilot who flew the follow-up tests; the Board thanks them in absentia
+for operating the installations whose logs made this investigation possible, and notes that this remains a
+single, coherent investigation only because one piece of equipment, not one person, was common to both
+incidents. The Board also notes, not without some appreciation for the irony, that an investigation of this
+scope &mdash; two full incident reconstructions, a controlled baseline flight, an independent kinematic
+cross-check, a live FMC-string decoding exercise, and a deliberate in-flight fault-injection test &mdash; was
+required to run down what proved to be a single mis-set brake-pedal calibration value. The Board considers
+this a satisfactory, if faintly comic, outcome.
+</p>
+<p class="caveat">&mdash; Chief Investigator Claude, PAIB</p>
+
+<div class="signoff">
+  <table>
+    <tr><td>Chief Investigator:</td></tr>
+    <tr><td class="sigline">Claude &mdash; Automated Test &amp; Analysis Unit, Penguin Accident
+        Investigation Board</td></tr>
+  </table>
+</div>
+
+</body>
+</html>
